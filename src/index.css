@@ -1,53 +1,111 @@
 @import "tailwindcss";
 
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  /* Exact Colors from User's Image 3 Color Strip */
+  --color-aqua: #9EF2EB;
+  --color-teal: #2B8F9E;
+  --color-dark: #1F2E35;
+  --color-mist: #F6FAF9;
+  --color-navy: #245B88;
+  --color-sage: #8AAEB2;
+  --color-terracotta: #986044;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+  /* Accent & Action Colors from UI Images 1 & 2 */
+  --color-pink: #E94057;
+  --color-green: #10B981;
+  --color-green-dark: #059669;
+  --color-gold: #F59E0B;
 
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Backgrounds & Text */
+  --bg-page: #F6FAF9;
+  --card-bg: #FFFFFF;
+  --text-primary: #1F2E35;
+  --text-secondary: #566E7A;
+  --text-muted: #8AAEB2;
 
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Outfit', system-ui, -apple-system, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
 
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #E8F2F3;
+}
+::-webkit-scrollbar-thumb {
+  background: #8AAEB2;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2B8F9E;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+}
+
+.glass-dark {
+  background: rgba(31, 46, 53, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(158, 242, 235, 0.2);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 15px -2px rgba(31, 46, 53, 0.08);
+}
+
+/* Color Accent Utilities */
+.bg-dwarka-dark { background-color: #1F2E35; }
+.bg-dwarka-teal { background-color: #2B8F9E; }
+.bg-dwarka-aqua { background-color: #9EF2EB; }
+.bg-dwarka-navy { background-color: #245B88; }
+.bg-dwarka-sage { background-color: #8AAEB2; }
+.bg-dwarka-terracotta { background-color: #986044; }
+.bg-dwarka-mist { background-color: #F6FAF9; }
+
+.text-dwarka-dark { color: #1F2E35; }
+.text-dwarka-teal { color: #2B8F9E; }
+.text-dwarka-navy { color: #245B88; }
+.text-dwarka-terracotta { color: #986044; }
+.text-dwarka-sage { color: #5B7B80; }
+
+.border-dwarka-teal { border-color: #2B8F9E; }
+.border-dwarka-aqua { border-color: #9EF2EB; }
+.border-dwarka-sage { border-color: #8AAEB2; }
+
+/* Subtle pulse animation for map waypoint */
+@keyframes mapPulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(233, 64, 87, 0.7); }
+  70% { transform: scale(1.1); box-shadow: 0 0 0 14px rgba(233, 64, 87, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(233, 64, 87, 0); }
+}
+
+.pulse-marker {
+  animation: mapPulse 2s infinite cubic-bezier(0.45, 0, 0.55, 1);
 }
