@@ -58,7 +58,7 @@ New Yatra Booking Inquiry:
 ✨ Special Note: ${formData.specialRequest}
 
 Please share confirmation and cab details.`;
-    window.open(`https://wa.me/919825012345?text=${encodeURIComponent(text)}`, '_blank');
+    window.open(`https://wa.me/918320570717?text=${encodeURIComponent(text)}`, '_blank');
   };
 
   return (

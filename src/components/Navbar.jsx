@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
-import { 
-  Compass, 
-  Phone, 
-  MessageCircle, 
-  Smartphone, 
-  MapPin, 
-  Menu, 
+import {
+  Compass,
+  Phone,
+  MessageCircle,
+  Smartphone,
+  MapPin,
+  Menu,
   X,
   Sparkles,
   Calendar
 } from 'lucide-react';
 
-export default function Navbar({ 
-  onOpenMobileApp, 
-  onOpenBooking, 
-  lang, 
-  setLang 
+export default function Navbar({
+  onOpenMobileApp,
+  onOpenBooking,
+  lang,
+  setLang
 }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -36,21 +36,21 @@ export default function Navbar({
           </div>
 
           <div className="flex items-center gap-4 text-xs">
-            <button 
+            <button
               onClick={() => setLang(lang === 'en' ? 'gu' : 'en')}
               className="px-2 py-0.5 rounded bg-[#2B8F9E]/30 hover:bg-[#2B8F9E] text-[#9EF2EB] hover:text-white font-semibold transition"
             >
               {lang === 'en' ? 'ગુજરાતી' : 'English'}
             </button>
-            <a 
-              href="tel:+919825000000" 
+            <a
+              href="tel:+919825000000"
               className="hidden sm:flex items-center gap-1.5 text-gray-200 hover:text-[#9EF2EB] transition"
             >
               <Phone className="w-3.5 h-3.5 text-[#9EF2EB]" />
-              <span>+91 98250 12345</span>
+              <span>+91 83205 70717</span>
             </a>
-            <a 
-              href="https://wa.me/919825012345?text=Hello%20Gujju%20Tour%20and%20Travels,%20I%20want%20to%20plan%20a%20trip%20to%20Dwarka."
+            <a
+              href="https://wa.me/918320570717?text=Hello%20Gujju%20Tour%20and%20Travels,%20I%20want%20to%20plan%20a%20trip%20to%20Dwarka."
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-1 text-[#10B981] font-semibold hover:underline"
@@ -154,36 +154,36 @@ export default function Navbar({
         {/* Mobile Dropdown Menu */}
         {mobileMenuOpen && (
           <div className="lg:hidden py-4 border-t border-[#2B8F9E]/20 space-y-3 bg-white/95 rounded-2xl px-4 my-2 shadow-lg">
-            <a 
-              href="#destinations" 
+            <a
+              href="#destinations"
               onClick={() => setMobileMenuOpen(false)}
               className="block py-2 text-sm font-semibold text-[#1F2E35] hover:text-[#2B8F9E]"
             >
               Destinations
             </a>
-            <a 
-              href="#route-map" 
+            <a
+              href="#route-map"
               onClick={() => setMobileMenuOpen(false)}
               className="block py-2 text-sm font-semibold text-[#1F2E35] hover:text-[#2B8F9E]"
             >
               Live Route Map (Interactive)
             </a>
-            <a 
-              href="#packages" 
+            <a
+              href="#packages"
               onClick={() => setMobileMenuOpen(false)}
               className="block py-2 text-sm font-semibold text-[#1F2E35] hover:text-[#2B8F9E]"
             >
               Tour Packages
             </a>
-            <a 
-              href="#cab-fleet" 
+            <a
+              href="#cab-fleet"
               onClick={() => setMobileMenuOpen(false)}
               className="block py-2 text-sm font-semibold text-[#1F2E35] hover:text-[#2B8F9E]"
             >
               Cab Fleet & Fare Calculator
             </a>
-            <a 
-              href="#dwarka-guide" 
+            <a
+              href="#dwarka-guide"
               onClick={() => setMobileMenuOpen(false)}
               className="block py-2 text-sm font-semibold text-[#1F2E35] hover:text-[#2B8F9E]"
             >

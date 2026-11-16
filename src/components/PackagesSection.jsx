@@ -1,11 +1,11 @@
 import React from 'react';
-import { 
-  Sparkles, 
-  CheckCircle2, 
-  Star, 
-  Clock, 
-  Car, 
-  MessageCircle, 
+import {
+  Sparkles,
+  CheckCircle2,
+  Star,
+  Clock,
+  Car,
+  MessageCircle,
   ArrowRight,
   ShieldCheck,
   Tag
@@ -16,7 +16,7 @@ export default function PackagesSection({ onOpenBooking, lang }) {
   return (
     <section id="packages" className="py-20 bg-[#F6FAF9] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#10B981]/10 border border-[#10B981]/30 text-[#059669] text-xs font-bold uppercase tracking-wider mb-3">
@@ -36,7 +36,7 @@ export default function PackagesSection({ onOpenBooking, lang }) {
         {/* Packages Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {TOUR_PACKAGES.map((pkg) => (
-            <div 
+            <div
               key={pkg.id}
               className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 hover:border-[#2B8F9E]/40 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between relative group"
             >
@@ -55,7 +55,7 @@ export default function PackagesSection({ onOpenBooking, lang }) {
                 <h3 className="text-lg font-extrabold text-[#1F2E35] leading-snug group-hover:text-[#2B8F9E] transition-colors">
                   {lang === 'gu' ? pkg.gujaratiTitle : pkg.title}
                 </h3>
-                
+
                 <div className="flex items-center gap-3 text-xs text-gray-500 mt-2 mb-4">
                   <span className="flex items-center gap-1">
                     <Clock className="w-3.5 h-3.5 text-[#2B8F9E]" />
@@ -109,7 +109,7 @@ export default function PackagesSection({ onOpenBooking, lang }) {
                   </div>
 
                   <a
-                    href={`https://wa.me/919825012345?text=Hello%20Gujju%20Tour%20and%20Travels,%20I%20am%20interested%20in%20${encodeURIComponent(pkg.title)}`}
+                    href={`https://wa.me/918320570717?text=Hello%20Gujju%20Tour%20and%20Travels,%20I%20am%20interested%20in%20${encodeURIComponent(pkg.title)}`}
                     target="_blank"
                     rel="noreferrer"
                     className="p-2.5 rounded-xl bg-[#10B981]/10 text-[#059669] hover:bg-[#10B981] hover:text-white transition"

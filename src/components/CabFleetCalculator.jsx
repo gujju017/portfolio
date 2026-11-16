@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { 
-  Car, 
-  Users, 
-  Briefcase, 
-  ShieldCheck, 
-  Check, 
-  Calculator, 
-  MessageCircle, 
-  PhoneCall, 
+import {
+  Car,
+  Users,
+  Briefcase,
+  ShieldCheck,
+  Check,
+  Calculator,
+  MessageCircle,
+  PhoneCall,
   Sparkles,
   MapPin,
   Clock
@@ -50,13 +50,13 @@ Package: ${circuitType}
 Days: ${tripDays}
 Estimated Fare: ₹${calculatedFare}
 Please confirm availability.`;
-    window.open(`https://wa.me/919825012345?text=${encodeURIComponent(text)}`, '_blank');
+    window.open(`https://wa.me/918320570717?text=${encodeURIComponent(text)}`, '_blank');
   };
 
   return (
     <section id="cab-fleet" className="py-20 bg-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#245B88]/10 border border-[#245B88]/30 text-[#245B88] text-xs font-bold uppercase tracking-wider mb-3">
@@ -81,11 +81,10 @@ Please confirm availability.`;
               <div
                 key={cab.id}
                 onClick={() => setSelectedCab(cab.id)}
-                className={`cursor-pointer rounded-3xl p-5 border-2 transition-all duration-300 flex flex-col justify-between ${
-                  isSelected
-                    ? 'border-[#2B8F9E] bg-[#9EF2EB]/10 shadow-xl ring-2 ring-[#2B8F9E]/20 scale-[1.02]'
-                    : 'border-gray-100 bg-[#F6FAF9] hover:border-gray-300'
-                }`}
+                className={`cursor-pointer rounded-3xl p-5 border-2 transition-all duration-300 flex flex-col justify-between ${isSelected
+                  ? 'border-[#2B8F9E] bg-[#9EF2EB]/10 shadow-xl ring-2 ring-[#2B8F9E]/20 scale-[1.02]'
+                  : 'border-gray-100 bg-[#F6FAF9] hover:border-gray-300'
+                  }`}
               >
                 <div>
                   {/* Vehicle Tag & Per Km Rate */}
@@ -133,9 +132,8 @@ Please confirm availability.`;
                       {cab.localDayRate}
                     </span>
                   </div>
-                  <span className={`text-xs font-bold px-3 py-1 rounded-xl transition ${
-                    isSelected ? 'bg-[#2B8F9E] text-white' : 'bg-gray-200 text-gray-700'
-                  }`}>
+                  <span className={`text-xs font-bold px-3 py-1 rounded-xl transition ${isSelected ? 'bg-[#2B8F9E] text-white' : 'bg-gray-200 text-gray-700'
+                    }`}>
                     {isSelected ? 'Selected' : 'Select'}
                   </span>
                 </div>
@@ -162,7 +160,7 @@ Please confirm availability.`;
                   <MapPin className="w-3.5 h-3.5 text-[#9EF2EB]" />
                   Pickup Location
                 </label>
-                <select 
+                <select
                   value={pickupLocation}
                   onChange={(e) => setPickupLocation(e.target.value)}
                   className="w-full bg-[#162126] border border-gray-600 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#9EF2EB]"
@@ -181,7 +179,7 @@ Please confirm availability.`;
                   <Clock className="w-3.5 h-3.5 text-[#9EF2EB]" />
                   Tour Duration &amp; Route
                 </label>
-                <select 
+                <select
                   value={circuitType}
                   onChange={(e) => setCircuitType(e.target.value)}
                   className="w-full bg-[#162126] border border-gray-600 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#9EF2EB]"
@@ -199,7 +197,7 @@ Please confirm availability.`;
                   <Users className="w-3.5 h-3.5 text-[#9EF2EB]" />
                   Number of Days
                 </label>
-                <select 
+                <select
                   value={tripDays}
                   onChange={(e) => setTripDays(Number(e.target.value))}
                   className="w-full bg-[#162126] border border-gray-600 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#9EF2EB]"
@@ -238,10 +236,10 @@ Please confirm availability.`;
                 </button>
 
                 <button
-                  onClick={() => onOpenBooking({ 
-                    vehicle: currentCabObj.name, 
-                    pickup: pickupLocation, 
-                    price: calculatedFare 
+                  onClick={() => onOpenBooking({
+                    vehicle: currentCabObj.name,
+                    pickup: pickupLocation,
+                    price: calculatedFare
                   })}
                   className="flex-grow sm:flex-grow-0 px-6 py-3.5 rounded-xl bg-[#2B8F9E] hover:bg-[#245B88] text-white font-extrabold text-sm shadow-lg flex items-center justify-center gap-2 transition"
                 >
@@ -255,7 +253,7 @@ Please confirm availability.`;
                 <ShieldCheck className="w-4 h-4 text-[#10B981]" />
                 Zero prepayment needed to reserve local cabs
               </span>
-              <span>Need immediate cab? Call helpline: +91 98250 12345</span>
+              <span>Need immediate cab? Call helpline: +91 83205 70717</span>
             </div>
           </div>
         </div>

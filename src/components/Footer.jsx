@@ -1,11 +1,11 @@
 import React from 'react';
-import { 
-  Compass, 
-  MapPin, 
-  Phone, 
-  Mail, 
-  MessageCircle, 
-  ShieldCheck, 
+import {
+  Compass,
+  MapPin,
+  Phone,
+  Mail,
+  MessageCircle,
+  ShieldCheck,
   Heart,
   ArrowUp
 } from 'lucide-react';
@@ -28,10 +28,10 @@ export default function Footer({ onOpenBooking, onOpenMobileApp, lang }) {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
-          
+
           {/* Column 1: Brand Info */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
@@ -142,14 +142,14 @@ export default function Footer({ onOpenBooking, onOpenMobileApp, lang }) {
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#9EF2EB] flex-shrink-0" />
-                <a href="tel:+919825012345" className="hover:text-white transition">
-                  +91 98250 12345 / 02892 234567
+                <a href="tel:+918320570717" className="hover:text-white transition">
+                  +91 83205 70717
                 </a>
               </div>
               <div className="flex items-center gap-2.5">
                 <MessageCircle className="w-4 h-4 text-[#10B981] flex-shrink-0" />
-                <a 
-                  href="https://wa.me/919825012345?text=Hello%20Gujju%20Tour%20and%20Travels"
+                <a
+                  href="https://wa.me/918320570717?text=Hello%20Gujju%20Tour%20and%20Travels"
                   target="_blank"
                   rel="noreferrer"
                   className="hover:text-white transition"
@@ -208,7 +208,7 @@ export default function Footer({ onOpenBooking, onOpenMobileApp, lang }) {
         </button>
 
         <a
-          href="https://wa.me/919825012345?text=Jay%20Dwarkadhish!%20I%20want%20to%20inquire%20about%20Dwarka%20tours%20and%20cabs."
+          href="https://wa.me/918320570717?text=Jay%20Dwarkadhish!%20I%20want%20to%20inquire%20about%20Dwarka%20tours%20and%20cabs."
           target="_blank"
           rel="noreferrer"
           className="w-12 h-12 rounded-full bg-[#10B981] text-white flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition"
