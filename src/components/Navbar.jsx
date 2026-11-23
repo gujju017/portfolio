@@ -188,15 +188,6 @@ export default function Navbar({
               {/* Mobile Social Links */}
               <div className="flex items-center gap-2 pt-2 border-t border-gray-100">
                 <a
-                  href="https://wa.me/918320570717?text=Hello%20Gujju%20Tour%20and%20Travels,%20I%20want%20to%20plan%20a%20trip%20to%20Dwarka."
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex-1 flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-[#25D366]/15 text-[#25D366] border border-[#25D366]/30 text-xs font-bold hover:bg-[#25D366]/25 transition active:scale-95"
-                >
-                  <img src='/social/whatsapp.png' alt="WhatsApp" className="w-4 h-4 object-contain" />
-                  <span>WhatsApp</span>
-                </a>
-                <a
                   href="https://www.instagram.com/gujju_tour_and_travels17"
                   target="_blank"
                   rel="noreferrer"
