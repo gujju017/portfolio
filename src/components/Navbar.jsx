@@ -3,9 +3,7 @@ import {
   Compass,
   MapPin,
   Menu,
-  MessageCircle,
   Phone,
-  Smartphone,
   X
 } from 'lucide-react';
 import { useState } from 'react';
@@ -25,7 +23,7 @@ export default function Navbar({
           <div className="flex items-center gap-2">
             <span className="inline-block w-2 h-2 rounded-full bg-[#10B981] animate-ping"></span>
             <span className="font-medium text-[#9EF2EB]">
-              {lang === 'gu' ? 'જય દ્વારકાધીશ! દ્વારકામાં સ્વાગત છે' : 'Jay Dwarkadhish! Welcome to Devbhumi Dwarka'}
+              {lang === 'gu' ? 'જય દ્વારકાધીશ! દ્વારકામાં સ્વાગત છે' : 'Jay Dwarkadhish!'}
             </span>
             <span className="hidden md:inline text-gray-300">|</span>
             <span className="hidden md:inline text-gray-300">
@@ -179,15 +177,6 @@ export default function Navbar({
               Dwarka Darshan Guide
             </a>
             <div className="pt-2 flex flex-col gap-2">
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                }}
-                className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl border border-[#2B8F9E] text-[#1F2E35] text-sm font-bold bg-[#9EF2EB]/20"
-              >
-                <Smartphone className="w-4 h-4 text-[#2B8F9E]" />
-                Explore in Mobile App Preview Mode
-              </button>
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);

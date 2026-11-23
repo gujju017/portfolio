@@ -102,22 +102,22 @@ export default function Footer({ onOpenMobileApp, lang }) {
             <ul className="space-y-2 text-xs text-gray-300">
               <li>
                 <a href="#cab-fleet" className="hover:text-[#9EF2EB] transition">
-                  Maruti Dzire AC (4-Seater)
+                  Maruti Dzire AC
                 </a>
               </li>
               <li>
                 <a href="#cab-fleet" className="hover:text-[#9EF2EB] transition">
-                  Maruti Ertiga Smart Hybrid (6-Seater)
+                  Maruti Ertiga Smart Hybrid
                 </a>
               </li>
               <li>
                 <a href="#cab-fleet" className="hover:text-[#9EF2EB] transition">
-                  Toyota Innova Crysta Luxury (7-Seater)
+                  Toyota Innova Crysta Luxury
                 </a>
               </li>
               <li>
                 <a href="#cab-fleet" className="hover:text-[#9EF2EB] transition">
-                  Force Urbania / Tempo Traveller (17-20 Seater)
+                  Force Urbania / Tempo Traveller
                 </a>
               </li>
               <li>

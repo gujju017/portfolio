@@ -46,7 +46,7 @@ export default function DwarkaGuideSection({ lang }) {
                     {lang === 'gu' ? '૫૨-ગજ ધ્વજારોહણ દર્શન સમય' : '52-Gaj Dhwajarohan (Flag) Ceremony'}
                   </h3>
                   <span className="text-xs text-[#986044] font-semibold">
-                    Sacred Flag Changed 5 Times Every Day
+                    Sacred Flag Changed 6 Times Every Day
                   </span>
                 </div>
               </div>
