@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { 
-  Sparkles, 
-  MapPin, 
-  Star, 
-  Compass, 
-  Palmtree, 
-  Landmark, 
-  Waves, 
+import {
+  Sparkles,
+  MapPin,
+  Star,
+  Compass,
+  Palmtree,
+  Landmark,
+  Waves,
   ArrowRight,
   Send,
   Eye
@@ -31,7 +31,7 @@ export default function DestinationsSection({ onSelectDestination, onOpenBooking
   return (
     <section id="destinations" className="py-20 bg-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Top AI Recommendation Card (Direct Replica of Image 2 AI Card) */}
         <div className="mb-12 p-4 sm:p-5 rounded-3xl bg-gradient-to-r from-[#9EF2EB]/20 via-[#F6FAF9] to-[#2B8F9E]/10 border border-[#2B8F9E]/20 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
           <div className="flex items-center gap-3.5">
@@ -82,11 +82,10 @@ export default function DestinationsSection({ onSelectDestination, onOpenBooking
                 <button
                   key={cat.id}
                   onClick={() => setSelectedCategory(cat.id)}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-2xl text-xs font-bold whitespace-nowrap transition shadow-sm ${
-                    isActive
+                  className={`flex items-center gap-2 px-4 py-2 rounded-2xl text-xs font-bold whitespace-nowrap transition shadow-sm ${isActive
                       ? 'bg-[#1F2E35] text-white shadow-md'
                       : 'bg-[#F6FAF9] text-[#566E7A] hover:bg-gray-100 border border-gray-100'
-                  }`}
+                    }`}
                 >
                   <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-[#9EF2EB]' : 'text-[#2B8F9E]'}`} />
                   <span>{lang === 'gu' ? cat.guLabel : cat.label}</span>
@@ -99,16 +98,16 @@ export default function DestinationsSection({ onSelectDestination, onOpenBooking
         {/* Destinations Cards Grid (Image 2 Card Aesthetics) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
           {filteredDestinations.map((dest) => (
-            <div 
+            <div
               key={dest.id}
               className="group bg-white rounded-[28px] overflow-hidden border border-gray-100 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
             >
               {/* Card Image Thumbnail */}
               <div className="relative h-60 w-full overflow-hidden">
-                <img 
-                  src={dest.image} 
+                <img
+                  src={dest.image}
                   alt={dest.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
 
@@ -158,11 +157,6 @@ export default function DestinationsSection({ onSelectDestination, onOpenBooking
                 {/* Bottom Card Footer with Actions */}
                 <div className="flex items-center justify-between pt-3 border-t border-gray-100">
                   <div>
-                    <span className="text-[10px] text-gray-400 block">From</span>
-                    <span className="text-lg font-extrabold text-[#2B8F9E]">
-                      ₹{dest.pricePerPerson}
-                    </span>
-                    <span className="text-[10px] text-gray-400">/person</span>
                   </div>
 
                   <div className="flex items-center gap-2">

@@ -1,18 +1,16 @@
-import React, { useState } from 'react';
 import {
+  Calendar,
   Compass,
-  Phone,
-  MessageCircle,
-  Smartphone,
   MapPin,
   Menu,
-  X,
-  Sparkles,
-  Calendar
+  MessageCircle,
+  Phone,
+  Smartphone,
+  X
 } from 'lucide-react';
+import { useState } from 'react';
 
 export default function Navbar({
-  onOpenMobileApp,
   onOpenBooking,
   lang,
   setLang
@@ -55,8 +53,17 @@ export default function Navbar({
               rel="noreferrer"
               className="flex items-center gap-1 text-[#10B981] font-semibold hover:underline"
             >
-              <MessageCircle className="w-3.5 h-3.5" />
+              <img src='/social/whatsapp.png' className="w-3.5 h-3.5" />
               <span>WhatsApp</span>
+            </a>
+            <a
+              href="https://www.instagram.com/gujju_tour_and_travels17"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-1 text-red-300 font-semibold hover:underline"
+            >
+              <img src='/social/instagram.png' className="w-3.5 h-3.5" />
+              <span>Instagram</span>
             </a>
           </div>
         </div>
@@ -112,17 +119,6 @@ export default function Navbar({
 
           {/* Right Action Buttons */}
           <div className="hidden sm:flex items-center gap-3">
-            {/* Mobile App Mode Launcher */}
-            <button
-              onClick={onOpenMobileApp}
-              className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white border border-[#2B8F9E]/30 text-[#1F2E35] text-xs font-bold hover:bg-[#9EF2EB]/20 hover:border-[#2B8F9E] shadow-sm transition group"
-              title="View UI replica from reference designs"
-            >
-              <Smartphone className="w-4 h-4 text-[#2B8F9E] group-hover:scale-110 transition-transform" />
-              <span>{lang === 'gu' ? 'મોબાઇલ એપ જુઓ' : 'Mobile App View'}</span>
-              <span className="w-2 h-2 rounded-full bg-[#E94057]"></span>
-            </button>
-
             {/* Book Now Button */}
             <button
               onClick={onOpenBooking}
@@ -135,13 +131,6 @@ export default function Navbar({
 
           {/* Mobile Menu Toggle */}
           <div className="lg:hidden flex items-center gap-2">
-            <button
-              onClick={onOpenMobileApp}
-              className="p-2 rounded-lg bg-white border border-[#2B8F9E]/30 text-[#2B8F9E]"
-              title="Mobile App View"
-            >
-              <Smartphone className="w-5 h-5" />
-            </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 rounded-lg text-[#1F2E35] hover:bg-gray-100 focus:outline-none"
@@ -193,7 +182,6 @@ export default function Navbar({
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);
-                  onOpenMobileApp();
                 }}
                 className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl border border-[#2B8F9E] text-[#1F2E35] text-sm font-bold bg-[#9EF2EB]/20"
               >

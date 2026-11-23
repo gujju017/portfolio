@@ -1,13 +1,10 @@
-import React from 'react';
 import {
-  Sparkles,
-  CheckCircle2,
-  Star,
-  Clock,
-  Car,
-  MessageCircle,
   ArrowRight,
-  ShieldCheck,
+  Car,
+  CheckCircle2,
+  Clock,
+  MessageCircle,
+  Star,
   Tag
 } from 'lucide-react';
 import { TOUR_PACKAGES } from '../data/dwarkaData';

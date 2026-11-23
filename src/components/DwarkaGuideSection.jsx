@@ -1,15 +1,12 @@
-import React from 'react';
-import { 
-  Sparkles, 
-  Flag, 
-  Clock, 
-  UtensilsCrossed, 
-  Info, 
-  Star, 
-  Quote, 
-  ShieldCheck, 
+import {
   CheckCircle2,
-  MapPin
+  Flag,
+  Info,
+  MapPin,
+  Quote,
+  Sparkles,
+  Star,
+  UtensilsCrossed
 } from 'lucide-react';
 import { DWARKA_LOCAL_GUIDE, REVIEWS } from '../data/dwarkaData';
 
@@ -17,7 +14,7 @@ export default function DwarkaGuideSection({ lang }) {
   return (
     <section id="dwarka-guide" className="py-20 bg-gradient-to-b from-[#EBF4F5] to-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#986044]/10 border border-[#986044]/30 text-[#986044] text-xs font-bold uppercase tracking-wider mb-3">
@@ -36,7 +33,7 @@ export default function DwarkaGuideSection({ lang }) {
 
         {/* 2-Column Guide Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-          
+
           {/* Card 1: 52-Gaj Dhwajarohan (Flag Hoisting) Schedule */}
           <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border border-gray-100 flex flex-col justify-between">
             <div>
@@ -60,7 +57,7 @@ export default function DwarkaGuideSection({ lang }) {
 
               <div className="space-y-3">
                 {DWARKA_LOCAL_GUIDE.dhwajarohanSchedule.map((item, idx) => (
-                  <div 
+                  <div
                     key={idx}
                     className="flex items-center justify-between p-3 rounded-2xl bg-[#F6FAF9] border border-gray-100"
                   >
@@ -93,7 +90,7 @@ export default function DwarkaGuideSection({ lang }) {
           </div>
 
           {/* Card 2: Authentic Kathiyawadi Cuisine & Sweets */}
-          <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border border-gray-100 flex flex-col justify-between">
+          <div hidden={true} className="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border border-gray-100 flex flex-col justify-between">
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 rounded-2xl bg-[#2B8F9E]/10 text-[#2B8F9E] flex items-center justify-center">
@@ -115,7 +112,7 @@ export default function DwarkaGuideSection({ lang }) {
 
               <div className="space-y-3.5">
                 {DWARKA_LOCAL_GUIDE.famousFoods.map((food, idx) => (
-                  <div 
+                  <div
                     key={idx}
                     className="p-3.5 rounded-2xl bg-[#F6FAF9] border border-gray-100 hover:border-[#986044]/30 transition"
                   >
@@ -157,7 +154,7 @@ export default function DwarkaGuideSection({ lang }) {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {REVIEWS.map((rev) => (
-              <div 
+              <div
                 key={rev.id}
                 className="p-6 rounded-3xl bg-white border border-gray-100 shadow-lg hover:shadow-xl transition flex flex-col justify-between"
               >

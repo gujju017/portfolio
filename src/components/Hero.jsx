@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { 
-  Sparkles, 
-  MapPin, 
-  Calendar, 
-  Users, 
-  Car, 
-  Search, 
-  ShieldCheck, 
-  Star, 
+import {
+  Sparkles,
+  MapPin,
+  Calendar,
+  Users,
+  Car,
+  Search,
+  ShieldCheck,
+  Star,
   ArrowRight,
   Sun,
   Wind,
@@ -32,8 +32,8 @@ export default function Hero({ onOpenBooking, onSelectDestination, lang }) {
     <section className="relative min-h-[90vh] flex flex-col justify-center overflow-hidden">
       {/* Background Hero Image with Luxury Multi-Stop Gradient */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src="/images/temple_hero.jpg" 
+        <img
+          src="/images/temple_hero.jpg"
           alt="Dwarkadhish Temple Golden Sunset by Gujju Tour and Travels"
           className="w-full h-full object-cover object-center scale-105 transform motion-safe:animate-[pulse_10s_ease-in-out_infinite]"
         />
@@ -70,8 +70,8 @@ export default function Hero({ onOpenBooking, onSelectDestination, lang }) {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#2B8F9E]/30 border border-[#9EF2EB]/40 text-[#9EF2EB] text-xs sm:text-sm font-bold tracking-wide backdrop-blur-md mb-6 shadow-sm">
             <Sparkles className="w-4 h-4 text-[#9EF2EB]" />
             <span>
-              {lang === 'gu' 
-                ? 'કેમ છો! પધારો દેવભૂમિ દ્વારકાની પવિત્ર ભૂમિ પર' 
+              {lang === 'gu'
+                ? 'કેમ છો! પધારો દેવભૂમિ દ્વારકાની પવિત્ર ભૂમિ પર'
                 : 'Kem Cho! Welcome to Devbhumi Dwarka'}
             </span>
             <span className="text-white/60">✦</span>
@@ -127,16 +127,15 @@ export default function Hero({ onOpenBooking, onSelectDestination, lang }) {
                 <MapPin className="w-3.5 h-3.5 text-[#9EF2EB]" />
                 Select Experience
               </label>
-              <select 
+              <select
                 value={selectedExperience}
                 onChange={(e) => setSelectedExperience(e.target.value)}
                 className="w-full bg-[#1F2E35]/80 border border-gray-600 rounded-xl px-3.5 py-3 text-sm text-white focus:outline-none focus:border-[#9EF2EB] transition font-medium"
               >
                 <option value="all">Complete Dwarka Yatra (All-in-One)</option>
-                <option value="dwarkadhish">Dwarkadhish VIP Darshan & Gomti</option>
                 <option value="sudarshan-bet">Sudarshan Setu & Bet Dwarka</option>
                 <option value="shivrajpur-scuba">Shivrajpur Beach & Scuba Safari</option>
-                <option value="somnath-combo">Dwarka + Somnath 3-Day Yatra</option>
+                <option value="somnath-combo">Dwarka + Somnath</option>
               </select>
             </div>
 
@@ -146,15 +145,15 @@ export default function Hero({ onOpenBooking, onSelectDestination, lang }) {
                 <Car className="w-3.5 h-3.5 text-[#9EF2EB]" />
                 Cab / Vehicle Type
               </label>
-              <select 
+              <select
                 value={selectedCar}
                 onChange={(e) => setSelectedCar(e.target.value)}
                 className="w-full bg-[#1F2E35]/80 border border-gray-600 rounded-xl px-3.5 py-3 text-sm text-white focus:outline-none focus:border-[#9EF2EB] transition font-medium"
               >
-                <option value="sedan">Maruti Dzire AC (Up to 4 Yatris)</option>
-                <option value="ertiga">Ertiga Hybrid MUV (Up to 6 Yatris)</option>
-                <option value="innova">Toyota Innova Crysta (Luxury 7 Seater)</option>
-                <option value="tempo">Urbania / Tempo (17-20 Seater Bus)</option>
+                <option value="sedan">Maruti Dzire AC</option>
+                <option value="ertiga">Ertiga SUV </option>
+                <option value="innova">Toyota Innova Crysta (Luxury)</option>
+                <option value="tempo">Urbania / Tempo</option>
               </select>
             </div>
 
@@ -164,16 +163,16 @@ export default function Hero({ onOpenBooking, onSelectDestination, lang }) {
                 <Users className="w-3.5 h-3.5 text-[#9EF2EB]" />
                 Total Yatris / Travelers
               </label>
-              <select 
+              <select
                 value={yatriCount}
                 onChange={(e) => setYatriCount(e.target.value)}
                 className="w-full bg-[#1F2E35]/80 border border-gray-600 rounded-xl px-3.5 py-3 text-sm text-white focus:outline-none focus:border-[#9EF2EB] transition font-medium"
               >
-                <option value="1">1 Person (Solo Yatri)</option>
-                <option value="2">2 Persons (Couple)</option>
-                <option value="4">4 Persons (Small Family)</option>
-                <option value="6">6 Persons (Family & Elders)</option>
-                <option value="8+">8+ Persons (Group / Mandali)</option>
+                <option value="1">1 Person</option>
+                <option value="2">2 Persons</option>
+                <option value="4">4 Persons</option>
+                <option value="6">6 Persons</option>
+                <option value="8+">10+ Persons</option>
               </select>
             </div>
 
@@ -194,10 +193,6 @@ export default function Hero({ onOpenBooking, onSelectDestination, lang }) {
             <div className="flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-[#10B981]" />
               <span>Govt. Registered Dwarka Operator</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Star className="w-4 h-4 text-[#F59E0B] fill-[#F59E0B]" />
-              <span>4.9 / 5 Rating (1,400+ Verified Reviews)</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-[#9EF2EB]"></span>

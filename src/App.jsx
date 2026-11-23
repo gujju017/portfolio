@@ -1,19 +1,17 @@
-import React, { useState } from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import DestinationsSection from './components/DestinationsSection';
-import InteractiveRouteMap from './components/InteractiveRouteMap';
-import PackagesSection from './components/PackagesSection';
-import CabFleetCalculator from './components/CabFleetCalculator';
-import DwarkaGuideSection from './components/DwarkaGuideSection';
-import DestinationDetailModal from './components/DestinationDetailModal';
-import MobileAppExperienceModal from './components/MobileAppExperienceModal';
+import { useState } from 'react';
 import BookingModal from './components/BookingModal';
+import CabFleetCalculator from './components/CabFleetCalculator';
+import DestinationDetailModal from './components/DestinationDetailModal';
+import DestinationsSection from './components/DestinationsSection';
+import DwarkaGuideSection from './components/DwarkaGuideSection';
 import Footer from './components/Footer';
+import Hero from './components/Hero';
+import InteractiveRouteMap from './components/InteractiveRouteMap';
+import Navbar from './components/Navbar';
+import PackagesSection from './components/PackagesSection';
 
 export default function App() {
   const [lang, setLang] = useState('en');
-  const [isMobileAppOpen, setIsMobileAppOpen] = useState(false);
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [bookingInitialData, setBookingInitialData] = useState(null);
   const [selectedDestination, setSelectedDestination] = useState(null);
@@ -41,8 +39,7 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col bg-[#F6FAF9] text-[#1F2E35]">
       {/* Navigation Header */}
-      <Navbar 
-        onOpenMobileApp={() => setIsMobileAppOpen(true)}
+      <Navbar
         onOpenBooking={() => handleOpenBooking()}
         lang={lang}
         setLang={setLang}
@@ -51,53 +48,53 @@ export default function App() {
       {/* Main Content Sections */}
       <main className="flex-grow">
         {/* Hero Section */}
-        <Hero 
+        <Hero
           onOpenBooking={handleOpenBooking}
           onSelectDestination={handleSelectDestination}
           lang={lang}
         />
 
         {/* Top Destinations Grid with AI Banner (Image 2 Inspired) */}
-        <DestinationsSection 
+        <DestinationsSection
           onSelectDestination={handleSelectDestination}
           onOpenBooking={handleOpenBooking}
           lang={lang}
         />
 
         {/* Interactive Route Map Navigator (Image 1 Inspired) */}
-        <InteractiveRouteMap 
+        <InteractiveRouteMap
           onOpenBooking={handleOpenBooking}
           lang={lang}
         />
 
         {/* Handcrafted Packages & Flash Deals */}
-        <PackagesSection 
+        <PackagesSection
           onOpenBooking={handleOpenBooking}
           lang={lang}
         />
 
         {/* Cab Fleet & Live Fare Calculator */}
-        <CabFleetCalculator 
+        <CabFleetCalculator
           onOpenBooking={handleOpenBooking}
           lang={lang}
         />
 
         {/* Local Dwarka Pilgrim Secrets & Food Guide */}
-        <DwarkaGuideSection 
+        {/* Add Dwarkadarsan details */}
+        <DwarkaGuideSection
           lang={lang}
         />
       </main>
 
       {/* Footer */}
-      <Footer 
+      <Footer
         onOpenBooking={() => handleOpenBooking()}
-        onOpenMobileApp={() => setIsMobileAppOpen(true)}
         lang={lang}
       />
 
       {/* Modal 1: Destination Detail View (UI Reference Image 2 Style) */}
       {selectedDestination && (
-        <DestinationDetailModal 
+        <DestinationDetailModal
           destination={selectedDestination}
           onClose={() => setSelectedDestination(null)}
           onBookNow={handleBookFromDetail}
@@ -105,15 +102,8 @@ export default function App() {
         />
       )}
 
-      {/* Modal 2: Interactive Mobile App Preview Device (Replicating Both UI Images) */}
-      <MobileAppExperienceModal 
-        isOpen={isMobileAppOpen}
-        onClose={() => setIsMobileAppOpen(false)}
-        onBookTour={(data) => handleOpenBooking(data)}
-      />
-
       {/* Modal 3: Booking Inquiry & Instant Voucher Modal */}
-      <BookingModal 
+      <BookingModal
         isOpen={isBookingOpen}
         onClose={() => setIsBookingOpen(false)}
         initialData={bookingInitialData}

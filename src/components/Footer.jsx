@@ -10,7 +10,7 @@ import {
   ArrowUp
 } from 'lucide-react';
 
-export default function Footer({ onOpenBooking, onOpenMobileApp, lang }) {
+export default function Footer({ onOpenMobileApp, lang }) {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -149,7 +149,7 @@ export default function Footer({ onOpenBooking, onOpenMobileApp, lang }) {
               <div className="flex items-center gap-2.5">
                 <MessageCircle className="w-4 h-4 text-[#10B981] flex-shrink-0" />
                 <a
-                  href="https://wa.me/918320570717?text=Hello%20Gujju%20Tour%20and%20Travels"
+                  href="https://wa.me/918320570717?text=Hello,%20Gujju%20Tour%20and%20Travels"
                   target="_blank"
                   rel="noreferrer"
                   className="hover:text-white transition"
@@ -157,19 +157,10 @@ export default function Footer({ onOpenBooking, onOpenMobileApp, lang }) {
                   WhatsApp Booking Helpline
                 </a>
               </div>
-              <div className="flex items-center gap-2.5">
+              <a href="mailto:gujjutourandtravels@gmail.com" className="flex items-center gap-2.5 cursor-pointer">
                 <Mail className="w-4 h-4 text-[#9EF2EB] flex-shrink-0" />
-                <span>info@gujjutourdwarka.com</span>
-              </div>
-            </div>
-
-            <div className="pt-2">
-              <button
-                onClick={onOpenMobileApp}
-                className="w-full py-2 px-3 rounded-xl bg-white/10 hover:bg-white/20 text-[#9EF2EB] text-xs font-bold border border-white/20 transition flex items-center justify-center gap-1.5"
-              >
-                <span>📱 Launch Interactive Mobile App View</span>
-              </button>
+                <span>gujjutourandtravels@gmail.com</span>
+              </a>
             </div>
           </div>
 
@@ -199,14 +190,6 @@ export default function Footer({ onOpenBooking, onOpenMobileApp, lang }) {
 
       {/* Floating Sticky Quick Action: WhatsApp & Phone on Mobile */}
       <div className="fixed bottom-4 right-4 z-40 flex flex-col gap-2.5">
-        <button
-          onClick={onOpenMobileApp}
-          className="w-12 h-12 rounded-full bg-[#1F2E35] border-2 border-[#9EF2EB] text-[#9EF2EB] flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition"
-          title="Open Mobile App Experience"
-        >
-          📱
-        </button>
-
         <a
           href="https://wa.me/918320570717?text=Jay%20Dwarkadhish!%20I%20want%20to%20inquire%20about%20Dwarka%20tours%20and%20cabs."
           target="_blank"
@@ -217,6 +200,6 @@ export default function Footer({ onOpenBooking, onOpenMobileApp, lang }) {
           <MessageCircle className="w-6 h-6" />
         </a>
       </div>
-    </footer>
+    </footer >
   );
 }

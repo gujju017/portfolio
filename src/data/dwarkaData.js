@@ -1,63 +1,33 @@
 export const DWARKA_DESTINATIONS = [
   {
-    id: "dwarkadhish-temple",
-    title: "Dwarkadhish Temple (Jagat Mandir)",
-    gujaratiTitle: "શ્રી દ્વારકાધીશ જગત મંદિર",
+    id: "nageshwar-jyotirlinga",
+    title: "Nageshwar Jyotirlinga (1st Jyotirlinga)",
+    gujaratiTitle: "શ્રી નાગેશ્વર જ્યોતિર્લિંગ",
     category: "temples",
-    tag: "Sacred Char Dham",
-    rating: 4.9,
-    reviewsCount: 3842,
-    location: "Dwarka Heart, Gomti Sangam",
+    tag: "1 of 12 Jyotirlingas",
+    rating: 4.8,
+    reviewsCount: 3100,
+    location: "Daarukavanam, Dwarka District",
     image: "/images/temple_hero.jpg",
-    distanceFromCenter: "0.2 km",
-    travelTime: "2 min walk",
-    pricePerPerson: 499,
+    distanceFromCenter: "17 km",
+    travelTime: "24 min drive",
+    pricePerPerson: 550,
     weather: {
-      temp: "29°C",
-      wind: "16 km/h",
-      humidity: "65%",
-      condition: "Pleasant Coastal Breeze"
+      temp: "30°C",
+      wind: "14 km/h",
+      humidity: "60%",
+      condition: "Peaceful Serenity"
     },
-    shortDesc: "The 2,500-year-old architectural marvel dedicated to Lord Krishna (Dwarkadhish - King of Dwarka). Features the iconic 52-Gaj fluttering flag.",
-    description: "Built over 2,500 years ago by Vajranabh (great-grandson of Lord Krishna), this limestone wonder rises 78 meters with 72 intricately carved pillars. Witness the sacred 52-Gaj Dhwajarohan ceremony, holy Gomti Snan, and divine evening aarti against the Arabian Sea backdrop.",
+    shortDesc: "One of the 12 supreme Jyotirlingas mentioned in the Shiva Purana, dominated by a majestic 85-foot meditating Lord Shiva statue.",
+    description: "Nageshwar Jyotirlinga is enshrined as the protector from all poisons and earthly sorrows. The majestic 85-foot seated Lord Shiva statue is visible from kilometers away. Pilgrims can perform personal Jalabhishek with pure milk and bilva leaves.",
     highlights: [
-      "52-Gaj Dhwaja (Sacred Flag) Hoisting 5 times daily",
-      "Moksha Dwar & Swarga Dwar entrances",
-      "VIP Darshan assistance with Gujju local guides",
-      "Traditional Prasad & 56 Bhog darshan"
+      "One of the 12 holiest Shiva Jyotirlingas in the universe",
+      "Colossal 85-foot tall Lord Shiva statue in padmasana",
+      "Abhishek and Rudrabhishek pooja facility",
+      "Serene landscaped gardens and holy ponds"
     ],
-    timings: "Morning: 06:30 AM - 01:00 PM | Evening: 05:00 PM - 09:30 PM",
-    aartiSchedule: ["Mangla: 06:30 AM", "Shringar: 10:30 AM", "Sandhya: 07:30 PM", "Shayan: 08:30 PM"]
-  },
-  {
-    id: "shivrajpur-beach",
-    title: "Shivrajpur Blue Flag Beach & Scuba",
-    gujaratiTitle: "શિવરાજપુર બ્લુ ફ્લેગ બીચ અને સ્કુબા",
-    category: "beaches",
-    tag: "International Blue Flag",
-    rating: 4.9,
-    reviewsCount: 2410,
-    location: "Shivrajpur Coast, 12 km from Dwarka",
-    image: "/images/shivrajpur_beach.jpg",
-    distanceFromCenter: "12.4 km",
-    travelTime: "18 min drive",
-    pricePerPerson: 1299,
-    weather: {
-      temp: "28°C",
-      wind: "19 km/h",
-      humidity: "68%",
-      condition: "Clear Turquoise Waters"
-    },
-    shortDesc: "Gujarat's only international Blue Flag certified white-sand beach with crystal clear waters, scuba diving, and dolphin spotting boat trips.",
-    description: "Shivrajpur Beach is one of India's cleanest and most scenic coastal paradises. With crystal-clear turquoise waters and soft white sands, enjoy professional PADI-certified scuba diving exploring colorful marine corals, jet skiing, banana rides, and sunset dolphin sighting boat tours.",
-    highlights: [
-      "Certified scuba diving & coral reef underwater walk",
-      "Dolphin sighting speed boat tours",
-      "Safe eco-certified swimming zone with lifeguards",
-      "Beach cafes with Gujarati snacks & coconut water"
-    ],
-    timings: "Open daily: 07:00 AM - 07:00 PM",
-    aartiSchedule: ["Sunset Dolphin Cruise: 04:30 PM", "Scuba Sessions: Every hour from 8 AM"]
+    timings: "06:00 AM to 12:30 PM | 05:00 PM to 09:30 PM",
+    aartiSchedule: ["Bhasma Aarti: 06:00 AM", "Sandhya Aarti: 07:00 PM"]
   },
   {
     id: "sudarshan-setu",
@@ -120,35 +90,38 @@ export const DWARKA_DESTINATIONS = [
     aartiSchedule: ["Morning Aarti: 07:30 AM", "Evening Darshan: 05:00 PM"]
   },
   {
-    id: "nageshwar-jyotirlinga",
-    title: "Nageshwar Jyotirlinga (1st Jyotirlinga)",
-    gujaratiTitle: "શ્રી નાગેશ્વર જ્યોતિર્લિંગ",
-    category: "temples",
-    tag: "1 of 12 Jyotirlingas",
-    rating: 4.8,
-    reviewsCount: 3100,
-    location: "Daarukavanam, Dwarka District",
-    image: "/images/temple_hero.jpg",
-    distanceFromCenter: "17 km",
-    travelTime: "24 min drive",
-    pricePerPerson: 550,
+    id: "shivrajpur-beach",
+    title: "Shivrajpur Blue Flag Beach & Scuba",
+    gujaratiTitle: "શિવરાજપુર બ્લુ ફ્લેગ બીચ અને સ્કુબા",
+    category: "beaches",
+    tag: "International Blue Flag",
+    rating: 4.9,
+    reviewsCount: 2410,
+    location: "Shivrajpur Coast, 12 km from Dwarka",
+    image: "/images/shivrajpur_beach.jpg",
+    distanceFromCenter: "12.4 km",
+    travelTime: "18 min drive",
+    pricePerPerson: 1299,
     weather: {
-      temp: "30°C",
-      wind: "14 km/h",
-      humidity: "60%",
-      condition: "Peaceful Serenity"
+      temp: "28°C",
+      wind: "19 km/h",
+      humidity: "68%",
+      condition: "Clear Turquoise Waters"
     },
-    shortDesc: "One of the 12 supreme Jyotirlingas mentioned in the Shiva Purana, dominated by a majestic 85-foot meditating Lord Shiva statue.",
-    description: "Nageshwar Jyotirlinga is enshrined as the protector from all poisons and earthly sorrows. The majestic 85-foot seated Lord Shiva statue is visible from kilometers away. Pilgrims can perform personal Jalabhishek with pure milk and bilva leaves.",
+    shortDesc: "Gujarat's only international Blue Flag certified white-sand beach with crystal clear waters, scuba diving, and dolphin spotting boat trips.",
+    description: "Shivrajpur Beach is one of India's cleanest and most scenic coastal paradises. With crystal-clear turquoise waters and soft white sands, enjoy professional PADI-certified scuba diving exploring colorful marine corals, jet skiing, banana rides, and sunset dolphin sighting boat tours.",
     highlights: [
-      "One of the 12 holiest Shiva Jyotirlingas in the universe",
-      "Colossal 85-foot tall Lord Shiva statue in padmasana",
-      "Abhishek and Rudrabhishek pooja facility",
-      "Serene landscaped gardens and holy ponds"
+      "Certified scuba diving & coral reef underwater walk",
+      "Dolphin sighting speed boat tours",
+      "Safe eco-certified swimming zone with lifeguards",
+      "Beach cafes with Gujarati snacks & coconut water"
     ],
-    timings: "06:00 AM to 12:30 PM | 05:00 PM to 09:30 PM",
-    aartiSchedule: ["Bhasma Aarti: 06:00 AM", "Sandhya Aarti: 07:00 PM"]
+    timings: "Open daily: 07:00 AM - 07:00 PM",
+    aartiSchedule: ["Sunset Dolphin Cruise: 04:30 PM", "Scuba Sessions: Every hour from 8 AM"]
   },
+
+
+
   {
     id: "bhadkeshwar-mahadev",
     title: "Bhadkeshwar Mahadev & Sunset Point",
@@ -183,98 +156,64 @@ export const DWARKA_DESTINATIONS = [
 
 export const TOUR_PACKAGES = [
   {
-    id: "dwarka-1day-express",
-    title: "Divine Dwarka 1-Day Darshan Express",
-    gujaratiTitle: "દ્વારકા ૧-દિવસ દિવ્ય દર્શન એક્સપ્રેસ",
+    id: "full_tour",
+    title: "Divine Dwarka 1-Day Darshan",
+    gujaratiTitle: "દ્વારકા ૧-દિવસ દિવ્ય દર્શન",
     duration: "1 Day / 10 Hours",
-    price: 1499,
-    originalPrice: 1999,
+    price: 3499,
+    originalPrice: 3999,
     discount: "-25%",
     vehicle: "AC Sedan / SUV with Chilled AC",
-    rating: 4.9,
-    reviews: 620,
     badge: "Most Popular",
     inclusions: [
-      "Dwarkadhish Temple VIP Darshan Guide",
-      "Holy Gomti Ghat Snan & Sudama Setu",
-      "Bhadkeshwar Mahadev Sunset & Lighthouse",
-      "Rukmini Devi 12th Century Temple",
-      "Traditional Kathiyawadi Thali Lunch",
-      "Private AC Cab with local Dwarka Gujarati driver",
-      "Complimentary Dwarka Peda box per family"
+      "Nageshwar Mahadev",
+      "Gopi Talav",
+      "Bet Dwarka",
+      "Shivrajpur Beach",
+      "Bhadkeshwar"
     ],
     pickup: "Dwarka Railway Station / Hotel Pickup & Drop"
   },
   {
     id: "dwarka-bet-dwarka-2day",
-    title: "Dwarka & Bet Dwarka 2-Day Ultimate Yatra",
+    title: "Dwarka Outside",
     gujaratiTitle: "દ્વારકા - બેટ દ્વારકા ૨-દિવસ સંપૂર્ણ યાત્રા",
-    duration: "2 Days / 1 Night",
-    price: 3499,
-    originalPrice: 4499,
+    duration: "1/2 Days",
+    price: 5999,
+    originalPrice: 7000,
     discount: "-22%",
-    vehicle: "Luxury Innova Crysta / Ertiga",
-    rating: 5.0,
-    reviews: 940,
+    vehicle: "SUV",
     badge: "Bestseller",
     inclusions: [
-      "Everything in Day 1 Package",
-      "Sudarshan Setu Scenic Sea Bridge Drive",
-      "Bet Dwarka Island & Lord Krishna Palace",
-      "Nageshwar Jyotirlinga VIP Jalabhishek",
-      "Gopi Talav & Holy Sand Chandan collection",
-      "Evening Chappan Bhog & Dhwajarohan viewing",
-      "Dolphin boat safari ticket included",
-      "Luxury 3-star AC hotel stay with breakfast"
+      "Madhavpur beach",
+      "Somnath",
     ],
     pickup: "Any Dwarka Hotel or Railway Station"
   },
-  {
-    id: "shivrajpur-scuba-coastal",
-    title: "Shivrajpur Blue Flag Beach & Marine Safari",
-    gujaratiTitle: "શિવરાજપુર બ્લુ ફ્લેગ બીચ અને સ્કૂબા સફારી",
-    duration: "Full Day / 8 Hours",
-    price: 2799,
-    originalPrice: 3500,
-    discount: "-20%",
-    vehicle: "Private Tourist Cab",
-    rating: 4.9,
-    reviews: 480,
-    badge: "Adventure & Leisure",
-    inclusions: [
-      "PADI Certified Scuba Diving with underwater video/photos",
-      "Arabian Sea Dolphin Spotting Speedboat Safari",
-      "Shivrajpur Blue Flag private lounger & beach umbrella",
-      "Jet Ski & Banana water sport access",
-      "Fresh coconut water & authentic coastal snacks",
-      "Doorstep pick-up & drop from Dwarka hotel"
-    ],
-    pickup: "Dwarka City Hotels / Resorts"
-  },
-  {
-    id: "dwarka-somnath-3day",
-    title: "Saurashtra Panch Tirth (Dwarka + Somnath)",
-    gujaratiTitle: "સૌરાષ્ટ્ર પંચ તીર્થ (દ્વારકા + સોમનાથ ૩-દિવસ)",
-    duration: "3 Days / 2 Nights",
-    price: 6899,
-    originalPrice: 8999,
-    discount: "-24%",
-    vehicle: "Dedicated AC Cab for full round trip",
-    rating: 5.0,
-    reviews: 1120,
-    badge: "Supreme Pilgrimage",
-    inclusions: [
-      "Dwarka + Bet Dwarka + Nageshwar Jyotirlinga",
-      "Porbandar: Kirti Mandir (Gandhiji) & Sudama Temple",
-      "Somnath Jyotirlinga VIP Darshan & 3D Light & Sound Show",
-      "Madhavpur Ghed Scenic Coconut Coastline Drive",
-      "Harshad Mataji (Harsiddhi) Temple at Miyani",
-      "2 Nights AC Hotel Accommodation (Dwarka + Somnath)",
-      "Daily breakfast & Kathiyawadi feast lunches",
-      "All toll taxes, parking, driver allowance included"
-    ],
-    pickup: "Dwarka / Rajkot / Jamnagar Airport / Ahmedabad"
-  }
+  // KM based SUV 16/RS
+  // SUV Sedan KM based available for N number of days and all types
+  // {
+  //   id: "shivrajpur-scuba-coastal",
+  //   title: "( BAKI CHE)",
+  //   gujaratiTitle: "શિવરાજપુર બ્લુ ફ્લેગ બીચ અને સ્કૂબા સફારી",
+  //   duration: "Full Day / 8 Hours",
+  //   price: 2799,
+  //   originalPrice: 3500,
+  //   discount: "-20%",
+  //   vehicle: "Private Tourist Cab",
+  //   rating: 4.9,
+  //   reviews: 480,
+  //   badge: "Adventure & Leisure",
+  //   inclusions: [
+  //     "PADI Certified Scuba Diving with underwater video/photos",
+  //     "Arabian Sea Dolphin Spotting Speedboat Safari",
+  //     "Shivrajpur Blue Flag private lounger & beach umbrella",
+  //     "Jet Ski & Banana water sport access",
+  //     "Fresh coconut water & authentic coastal snacks",
+  //     "Doorstep pick-up & drop from Dwarka hotel"
+  //   ],
+  //   pickup: "Dwarka City Hotels / Resorts"
+  // },
 ];
 
 export const CAB_FLEET = [
@@ -330,25 +269,6 @@ export const CAB_FLEET = [
 
 // Interactive Waypoints for the Image 1-style Route Map Explorer
 export const DWARKA_WAYPOINTS = [
-  {
-    id: "point-1",
-    name: "Dwarkadhish Jagat Mandir",
-    distanceKm: "0.0 km",
-    driveTime: "Start",
-    badge: "Mokshapuri",
-    category: "temple",
-    coordX: 18,
-    coordY: 72,
-    shortNote: "The heart of Dwarka. Flag hoisting ceremony & Gomti sangam.",
-    hotelsNearby: [
-      { name: "Lords Eco Inn Dwarka", rating: "5.0", price: "₹2,600", image: "/images/temple_hero.jpg" },
-      { name: "Kokila Dhirubhai Ambani Bhavan", rating: "4.8", price: "₹950", image: "/images/cab_fleet.jpg" }
-    ],
-    restaurantsNearby: [
-      { name: "Shreeji Kathiyawadi Thali", specialty: "Ringna no Olo & Bajra Rotlo", rating: "4.9" },
-      { name: "Shrinath Dwarka Peda Mart", specialty: "Famous Teen Batti Peda", rating: "5.0" }
-    ]
-  },
   {
     id: "point-2",
     name: "Gomti Ghat & Sudama Setu",

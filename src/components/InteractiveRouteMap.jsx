@@ -1,18 +1,14 @@
-import React, { useState } from 'react';
-import { 
-  Navigation, 
-  Clock, 
-  MapPin, 
-  Bed, 
-  UtensilsCrossed, 
-  Sparkles, 
-  Star, 
+import {
   ArrowRight,
-  ShieldCheck,
-  ChevronRight,
-  CheckCircle2,
-  Compass
+  Bed,
+  Clock,
+  Compass,
+  MapPin,
+  Navigation,
+  Star,
+  UtensilsCrossed
 } from 'lucide-react';
+import { useState } from 'react';
 import { DWARKA_WAYPOINTS } from '../data/dwarkaData';
 
 export default function InteractiveRouteMap({ onOpenBooking, lang }) {
@@ -24,7 +20,7 @@ export default function InteractiveRouteMap({ onOpenBooking, lang }) {
   return (
     <section id="route-map" className="py-20 bg-gradient-to-b from-[#F6FAF9] to-[#EBF4F5] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2B8F9E]/10 border border-[#2B8F9E]/30 text-[#2B8F9E] text-xs font-bold uppercase tracking-wider mb-3">
@@ -32,8 +28,8 @@ export default function InteractiveRouteMap({ onOpenBooking, lang }) {
             <span>{lang === 'gu' ? 'ઇન્ટરેક્ટિવ રૂટ નેવિગેટર' : 'Interactive Coastal Route & Waypoint Explorer'}</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1F2E35] tracking-tight">
-            {lang === 'gu' 
-              ? 'દ્વારકાથી બેટ દ્વારકા: ૩૫ કિ.મી. દરિયાઈ યાત્રા' 
+            {lang === 'gu'
+              ? 'દ્વારકાથી બેટ દ્વારકા: ૩૫ કિ.મી. દરિયાઈ યાત્રા'
               : 'Explore the Sacred 35 km Dwarka Coastal Circuit'}
           </h2>
           <p className="mt-3 text-sm sm:text-base text-[#566E7A] leading-relaxed">
@@ -45,13 +41,13 @@ export default function InteractiveRouteMap({ onOpenBooking, lang }) {
 
         {/* The Route Navigator Grid (UI Reference Image 1 Layout) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
+
           {/* Left Column: Interactive Map Canvas with Floating HUD */}
           <div className="lg:col-span-7 bg-[#1F2E35] rounded-3xl p-4 sm:p-6 text-white relative shadow-2xl overflow-hidden border border-[#9EF2EB]/20">
             {/* Background Map Visual */}
             <div className="relative h-[480px] sm:h-[540px] w-full rounded-2xl overflow-hidden bg-gradient-to-b from-[#1C2A30] to-[#121B20]">
-              <img 
-                src="/images/sudarshan_setu.jpg" 
+              <img
+                src="/images/sudarshan_setu.jpg"
                 alt="Dwarka Coast Route"
                 className="w-full h-full object-cover opacity-45 mix-blend-luminosity filter blur-[0.5px]"
               />
@@ -73,19 +69,19 @@ export default function InteractiveRouteMap({ onOpenBooking, lang }) {
                 <rect x="55%" y="45%" width="45%" height="55%" fill="url(#dotPattern)" />
 
                 {/* The Highway S-Curve path */}
-                <path 
-                  d="M 60 440 C 90 400, 140 370, 180 340 C 240 300, 270 250, 320 200 C 370 150, 420 110, 490 80" 
-                  fill="none" 
-                  stroke="rgba(255,255,255,0.2)" 
-                  strokeWidth="14" 
+                <path
+                  d="M 60 440 C 90 400, 140 370, 180 340 C 240 300, 270 250, 320 200 C 370 150, 420 110, 490 80"
+                  fill="none"
+                  stroke="rgba(255,255,255,0.2)"
+                  strokeWidth="14"
                   strokeLinecap="round"
                 />
-                <path 
-                  d="M 60 440 C 90 400, 140 370, 180 340 C 240 300, 270 250, 320 200 C 370 150, 420 110, 490 80" 
-                  fill="none" 
-                  stroke="url(#routeGradient)" 
-                  strokeWidth="6" 
-                  strokeLinecap="round" 
+                <path
+                  d="M 60 440 C 90 400, 140 370, 180 340 C 240 300, 270 250, 320 200 C 370 150, 420 110, 490 80"
+                  fill="none"
+                  stroke="url(#routeGradient)"
+                  strokeWidth="6"
+                  strokeLinecap="round"
                   strokeDasharray="4 6"
                 />
               </svg>
@@ -175,11 +171,10 @@ export default function InteractiveRouteMap({ onOpenBooking, lang }) {
                 <button
                   key={wp.id}
                   onClick={() => setActivePointIndex(idx)}
-                  className={`px-3 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition flex items-center gap-1.5 ${
-                    idx === activePointIndex 
+                  className={`px-3 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition flex items-center gap-1.5 ${idx === activePointIndex
                       ? 'bg-[#E94057] text-white font-bold shadow-md'
                       : 'bg-white/10 hover:bg-white/20 text-gray-300'
-                  }`}
+                    }`}
                 >
                   <span>{idx + 1}. {wp.name.split(' ')[0]}</span>
                 </button>
@@ -214,11 +209,10 @@ export default function InteractiveRouteMap({ onOpenBooking, lang }) {
               <div className="flex items-center gap-3 mb-5">
                 <button
                   onClick={() => setActiveTab('hotels')}
-                  className={`flex items-center gap-2 px-5 py-2.5 rounded-2xl text-xs font-bold transition-all shadow-sm ${
-                    activeTab === 'hotels'
+                  className={`flex items-center gap-2 px-5 py-2.5 rounded-2xl text-xs font-bold transition-all shadow-sm ${activeTab === 'hotels'
                       ? 'bg-[#E94057] text-white shadow-md shadow-[#E94057]/30 scale-105'
                       : 'bg-gray-100 text-[#566E7A] hover:bg-gray-200'
-                  }`}
+                    }`}
                 >
                   <Bed className="w-4 h-4" />
                   <span>Verified Hotels &amp; Stays</span>
@@ -226,11 +220,10 @@ export default function InteractiveRouteMap({ onOpenBooking, lang }) {
 
                 <button
                   onClick={() => setActiveTab('restaurants')}
-                  className={`flex items-center gap-2 px-5 py-2.5 rounded-2xl text-xs font-bold transition-all shadow-sm ${
-                    activeTab === 'restaurants'
+                  className={`flex items-center gap-2 px-5 py-2.5 rounded-2xl text-xs font-bold transition-all shadow-sm ${activeTab === 'restaurants'
                       ? 'bg-[#E94057] text-white shadow-md shadow-[#E94057]/30 scale-105'
                       : 'bg-gray-100 text-[#566E7A] hover:bg-gray-200'
-                  }`}
+                    }`}
                 >
                   <UtensilsCrossed className="w-4 h-4" />
                   <span>Kathiyawadi Food</span>
@@ -241,15 +234,15 @@ export default function InteractiveRouteMap({ onOpenBooking, lang }) {
               <div className="space-y-3.5">
                 {activeTab === 'hotels' ? (
                   currentPoint.hotelsNearby.map((hotel, idx) => (
-                    <div 
+                    <div
                       key={idx}
                       className="flex items-center justify-between p-3.5 rounded-2xl border border-gray-100 bg-[#F6FAF9] hover:border-[#2B8F9E]/40 hover:shadow-md transition group"
                     >
                       <div className="flex items-center gap-3.5">
-                        <img 
-                          src={hotel.image} 
+                        <img
+                          src={hotel.image}
                           alt={hotel.name}
-                          className="w-14 h-14 rounded-xl object-cover shadow-sm group-hover:scale-105 transition-transform" 
+                          className="w-14 h-14 rounded-xl object-cover shadow-sm group-hover:scale-105 transition-transform"
                         />
                         <div>
                           <div className="flex items-center gap-1.5">
@@ -276,7 +269,7 @@ export default function InteractiveRouteMap({ onOpenBooking, lang }) {
                   ))
                 ) : (
                   currentPoint.restaurantsNearby.map((rest, idx) => (
-                    <div 
+                    <div
                       key={idx}
                       className="p-3.5 rounded-2xl border border-gray-100 bg-[#F6FAF9] hover:border-[#986044]/40 hover:shadow-md transition"
                     >
@@ -305,7 +298,7 @@ export default function InteractiveRouteMap({ onOpenBooking, lang }) {
                 <span>Includes AC Cab, Tolls &amp; Local Guide</span>
                 <span className="font-bold text-[#10B981]">Instant Confirmation</span>
               </div>
-              
+
               <button
                 onClick={() => onOpenBooking({ destination: currentPoint.name })}
                 className="w-full py-4 rounded-2xl bg-[#1F2E35] hover:bg-[#2B8F9E] text-white font-extrabold text-sm shadow-xl flex items-center justify-center gap-2 active:scale-95 transition-all group"
