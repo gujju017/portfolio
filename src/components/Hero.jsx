@@ -1,23 +1,27 @@
-import React, { useState } from 'react';
 import {
-  Sparkles,
-  MapPin,
-  Calendar,
-  Users,
+  ArrowRight,
   Car,
+  Cloud,
+  CloudRain,
+  CloudSun,
+  Compass,
+  MapPin,
   Search,
   ShieldCheck,
-  Star,
-  ArrowRight,
+  Sparkles,
   Sun,
-  Wind,
-  Compass
+  Users,
+  Wind
 } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { getDwarkaWeather } from '../utils/common-functions';
 
-export default function Hero({ onOpenBooking, onSelectDestination, lang }) {
+export default function Hero({ onOpenBooking, lang }) {
   const [selectedExperience, setSelectedExperience] = useState('all');
   const [selectedCar, setSelectedCar] = useState('sedan');
   const [yatriCount, setYatriCount] = useState('2');
+  const [weather, setWeather] = useState(null);
+  const [isWeatherLoading, setIsWeatherLoading] = useState(true);
 
   const handleQuickSearch = (e) => {
     e.preventDefault();
@@ -26,6 +30,40 @@ export default function Hero({ onOpenBooking, onSelectDestination, lang }) {
       vehicle: selectedCar,
       passengers: yatriCount
     });
+  };
+
+  useEffect(() => {
+    let isMounted = true;
+    getDwarkaWeather()
+      .then((data) => {
+        if (isMounted) {
+          setWeather(data);
+          setIsWeatherLoading(false);
+        }
+      })
+      .catch((err) => {
+        if (isMounted) {
+          console.error("Failed to load Dwarka weather:", err);
+          setIsWeatherLoading(false);
+        }
+      });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  const renderWeatherIcon = (code) => {
+    if (code >= 60 && code <= 82) {
+      return <CloudRain className="w-5 h-5 text-[#9EF2EB] animate-bounce" />;
+    }
+    if (code === 1 || code === 2) {
+      return <CloudSun className="w-5 h-5 text-amber-300" />;
+    }
+    if (code === 3 || code === 45 || code === 48) {
+      return <Cloud className="w-5 h-5 text-gray-200" />;
+    }
+    return <Sun className="w-5 h-5 text-amber-300 animate-[spin_20s_linear_infinite]" />;
   };
 
   return (
@@ -42,22 +80,34 @@ export default function Hero({ onOpenBooking, onSelectDestination, lang }) {
         <div className="absolute inset-0 bg-gradient-to-t from-[#1F2E35] via-transparent to-black/30" />
       </div>
 
-      {/* Floating Weather & Marine Badge on Hero */}
-      <div className="absolute top-6 right-6 z-10 hidden md:flex items-center gap-3 px-4 py-2.5 rounded-2xl glass-dark text-white border border-[#9EF2EB]/30 shadow-xl">
-        <div className="w-9 h-9 rounded-xl bg-[#2B8F9E]/40 flex items-center justify-center text-[#9EF2EB]">
-          <Sun className="w-5 h-5 animate-[spin_20s_linear_infinite]" />
+      {/* Floating Weather & Marine Badge on Hero (Live Open-Meteo Integration) */}
+      <div className="absolute top-6 right-6 z-10 hidden sm:flex items-center gap-3 px-4 py-2.5 rounded-2xl glass-dark text-white border border-[#9EF2EB]/30 shadow-xl backdrop-blur-md hover:scale-105 transition-all duration-300">
+        <div className="w-9 h-9 rounded-xl bg-[#2B8F9E]/40 flex items-center justify-center text-[#9EF2EB] flex-shrink-0">
+          {renderWeatherIcon(weather?.weatherCode ?? 0)}
         </div>
         <div className="text-left text-xs">
           <div className="flex items-center gap-2">
-            <span className="font-bold text-white text-sm">Dwarka Coast</span>
-            <span className="px-1.5 py-0.2 rounded bg-[#10B981] text-[10px] font-bold">Live</span>
+            <span className="font-bold text-white text-sm">
+              {lang === 'gu' ? 'દ્વારકા દરિયાકાંઠો' : 'Dwarka Coast'}
+            </span>
+            <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-[#10B981] text-[10px] font-bold text-white">
+              <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
+              Live
+            </span>
           </div>
           <div className="text-gray-300 flex items-center gap-2 mt-0.5">
-            <span>28°C Sunny</span>
+            <span>
+              {weather
+                ? `${weather.temperature}°C ${lang === 'gu' ? weather.conditionGu : weather.conditionEn}`
+                : isWeatherLoading
+                ? 'Loading...'
+                : '26°C Clear Sky'}
+            </span>
             <span>•</span>
             <span className="flex items-center gap-1">
               <Wind className="w-3 h-3 text-[#9EF2EB]" />
-              18 km/h Arabian Breeze
+              <span>{weather ? `${weather.windSpeed} km/h` : '12 km/h'}</span>
+              <span>{lang === 'gu' ? 'પવન' : 'Arabian Breeze'}</span>
             </span>
           </div>
         </div>

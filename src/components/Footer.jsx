@@ -7,7 +7,9 @@ import {
   MessageCircle,
   ShieldCheck,
   Heart,
-  ArrowUp
+  ArrowUp,
+  Car,
+  Sparkles
 } from 'lucide-react';
 
 export default function Footer({ onOpenMobileApp, lang }) {
@@ -54,75 +56,161 @@ export default function Footer({ onOpenMobileApp, lang }) {
                 : 'Native Dwarka pilgrimage & travel specialists. Guiding yatris to Shri Dwarkadhish VIP darshan, Sudarshan Setu, Bet Dwarka, and Shivrajpur Blue Flag Beach with clean private cabs and local Gujarati hospitality.'}
             </p>
 
-            <div className="pt-2 flex items-center gap-2 text-xs font-bold text-[#10B981]">
+            <div className="flex items-center gap-2 text-xs font-bold text-[#10B981]">
               <ShieldCheck className="w-4 h-4" />
               <span>Gujarat Tourism Approved Partner</span>
             </div>
+
+            {/* Social Media Links */}
+            <div className="pt-2 flex items-center gap-2.5">
+              <a
+                href="https://wa.me/918320570717?text=Hello%20Gujju%20Tour%20and%20Travels,%20I%20want%20to%20plan%20a%20trip%20to%20Dwarka."
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#25D366]/15 hover:bg-[#25D366]/25 text-[#25D366] border border-[#25D366]/30 font-bold transition text-xs hover:scale-105"
+                title="WhatsApp Us"
+              >
+                <img src="/social/whatsapp.png" alt="WhatsApp" className="w-3.5 h-3.5 object-contain" />
+                <span>WhatsApp</span>
+              </a>
+              <a
+                href="https://www.instagram.com/gujju_tour_and_travels17"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-[#F58529]/15 via-[#DD2A7B]/15 to-[#8134AF]/15 hover:from-[#F58529]/25 hover:via-[#DD2A7B]/25 hover:to-[#8134AF]/25 text-[#FF5B84] border border-[#DD2A7B]/30 font-bold transition text-xs hover:scale-105"
+                title="Instagram"
+              >
+                <img src="/social/instagram.png" alt="Instagram" className="w-3.5 h-3.5 object-contain" />
+                <span>Instagram</span>
+              </a>
+            </div>
           </div>
 
-          {/* Column 2: Quick Links */}
+          {/* Column 2: Places & Sacred Circuits */}
           <div className="space-y-3">
-            <h4 className="text-sm font-extrabold uppercase tracking-wider text-[#9EF2EB]">
-              Popular Circuits
+            <h4 className="text-sm font-extrabold uppercase tracking-wider text-[#9EF2EB] flex items-center gap-1.5">
+              <Sparkles className="w-4 h-4 text-[#9EF2EB]" />
+              <span>{lang === 'gu' ? 'દર્શનીય સ્થળો અને સર્કિટ' : 'Dwarka Places & Circuits'}</span>
             </h4>
             <ul className="space-y-2 text-xs text-gray-300">
               <li>
-                <a href="#destinations" className="hover:text-[#9EF2EB] transition">
-                  Dwarkadhish Temple &amp; 52-Gaj Dhwaja
+                <a href="#destinations" className="hover:text-[#9EF2EB] transition flex items-center justify-between group">
+                  <span className="group-hover:translate-x-1 transition-transform flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#9EF2EB]" />
+                    <span>{lang === 'gu' ? '૧. નાગેશ્વર જ્યોતિર્લિંગ' : '1. Nageshwar Jyotirlinga'}</span>
+                  </span>
+                  <span className="text-[10px] text-gray-400 group-hover:text-[#9EF2EB]">1st Jyotirlinga</span>
                 </a>
               </li>
               <li>
-                <a href="#destinations" className="hover:text-[#9EF2EB] transition">
-                  Shivrajpur Blue Flag Beach Scuba
+                <a href="#destinations" className="hover:text-[#9EF2EB] transition flex items-center justify-between group">
+                  <span className="group-hover:translate-x-1 transition-transform flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#9EF2EB]" />
+                    <span>{lang === 'gu' ? '૨. સુદર્શન સેતુ બ્રિજ' : '2. Sudarshan Setu Sea Bridge'}</span>
+                  </span>
+                  <span className="text-[10px] text-gray-400 group-hover:text-[#9EF2EB]">2.32 km Bay</span>
                 </a>
               </li>
               <li>
-                <a href="#route-map" className="hover:text-[#9EF2EB] transition">
-                  Sudarshan Setu &amp; Bet Dwarka Island
+                <a href="#destinations" className="hover:text-[#9EF2EB] transition flex items-center justify-between group">
+                  <span className="group-hover:translate-x-1 transition-transform flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#9EF2EB]" />
+                    <span>{lang === 'gu' ? '૩. બેટ દ્વારકા ટાપુ' : '3. Bet Dwarka Sacred Island'}</span>
+                  </span>
+                  <span className="text-[10px] text-gray-400 group-hover:text-[#9EF2EB]">Krishna Palace</span>
                 </a>
               </li>
               <li>
-                <a href="#destinations" className="hover:text-[#9EF2EB] transition">
-                  Nageshwar Jyotirlinga Jalabhishek
+                <a href="#destinations" className="hover:text-[#9EF2EB] transition flex items-center justify-between group">
+                  <span className="group-hover:translate-x-1 transition-transform flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#9EF2EB]" />
+                    <span>{lang === 'gu' ? '૪. શિવરાજપુર બીચ' : '4. Shivrajpur Blue Flag Beach'}</span>
+                  </span>
+                  <span className="text-[10px] text-[#10B981] group-hover:text-[#9EF2EB]">Scuba &amp; Dolphin</span>
                 </a>
               </li>
               <li>
-                <a href="#packages" className="hover:text-[#9EF2EB] transition">
-                  Dwarka + Somnath Saurashtra Yatra
+                <a href="#destinations" className="hover:text-[#9EF2EB] transition flex items-center justify-between group">
+                  <span className="group-hover:translate-x-1 transition-transform flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#9EF2EB]" />
+                    <span>{lang === 'gu' ? '૫. ભડકેશ્વર મહાદેવ' : '5. Bhadkeshwar Mahadev'}</span>
+                  </span>
+                  <span className="text-[10px] text-gray-400 group-hover:text-[#9EF2EB]">Sunset Rock</span>
+                </a>
+              </li>
+              <li>
+                <a href="#packages" className="hover:text-[#9EF2EB] transition flex items-center justify-between group">
+                  <span className="group-hover:translate-x-1 transition-transform flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#E94057]" />
+                    <span>{lang === 'gu' ? 'દ્વારકા - સોમનાથ યાત્રા' : 'Dwarka - Somnath Circuit'}</span>
+                  </span>
+                  <span className="text-[10px] text-amber-400 font-bold">Madhavpur Beach</span>
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Column 3: Cab Fleet & Services */}
+          {/* Column 3: Cab Fleet & Rentals */}
           <div className="space-y-3">
-            <h4 className="text-sm font-extrabold uppercase tracking-wider text-[#9EF2EB]">
-              Fleet &amp; Rentals
+            <h4 className="text-sm font-extrabold uppercase tracking-wider text-[#9EF2EB] flex items-center gap-1.5">
+              <Car className="w-4 h-4 text-[#9EF2EB]" />
+              <span>{lang === 'gu' ? 'કેબ રેન્ટલ્સ અને વાહનો' : 'Cab Fleet & Rentals'}</span>
             </h4>
             <ul className="space-y-2 text-xs text-gray-300">
               <li>
-                <a href="#cab-fleet" className="hover:text-[#9EF2EB] transition">
-                  Maruti Dzire AC
+                <a href="#packages" className="hover:text-[#9EF2EB] transition flex items-center justify-between group">
+                  <span className="group-hover:translate-x-1 transition-transform flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#10B981]" />
+                    <strong className="text-white group-hover:text-[#9EF2EB]">{lang === 'gu' ? 'SUV રેન્ટલ (૧૬ રૂ./કિ.મી.)' : 'KM-Based SUV Rental'}</strong>
+                  </span>
+                  <span className="text-[10px] font-extrabold bg-[#10B981]/20 text-[#10B981] px-1.5 py-0.5 rounded border border-[#10B981]/30">
+                    ₹16/KM
+                  </span>
                 </a>
               </li>
               <li>
-                <a href="#cab-fleet" className="hover:text-[#9EF2EB] transition">
-                  Maruti Ertiga Smart Hybrid
+                <a href="#cab-fleet" className="hover:text-[#9EF2EB] transition flex items-center justify-between group">
+                  <span className="group-hover:translate-x-1 transition-transform flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#9EF2EB]" />
+                    <span>{lang === 'gu' ? 'મારુતિ ડિઝાયર AC' : 'Maruti Dzire AC (Sedan)'}</span>
+                  </span>
+                  <span className="text-[10px] text-gray-400 group-hover:text-[#9EF2EB]">₹12/km</span>
                 </a>
               </li>
               <li>
-                <a href="#cab-fleet" className="hover:text-[#9EF2EB] transition">
-                  Toyota Innova Crysta Luxury
+                <a href="#cab-fleet" className="hover:text-[#9EF2EB] transition flex items-center justify-between group">
+                  <span className="group-hover:translate-x-1 transition-transform flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#9EF2EB]" />
+                    <span>{lang === 'gu' ? 'મારુતિ અર્ટીગા હાઇબ્રિડ' : 'Maruti Ertiga Hybrid (MUV)'}</span>
+                  </span>
+                  <span className="text-[10px] text-gray-400 group-hover:text-[#9EF2EB]">₹15/km</span>
                 </a>
               </li>
               <li>
-                <a href="#cab-fleet" className="hover:text-[#9EF2EB] transition">
-                  Force Urbania / Tempo Traveller
+                <a href="#cab-fleet" className="hover:text-[#9EF2EB] transition flex items-center justify-between group">
+                  <span className="group-hover:translate-x-1 transition-transform flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#9EF2EB]" />
+                    <span>{lang === 'gu' ? 'ઇનોવા ક્રિસ્ટા લક્ઝરી' : 'Toyota Innova Crysta'}</span>
+                  </span>
+                  <span className="text-[10px] text-amber-400 group-hover:text-[#9EF2EB]">Luxury 7-Seater</span>
                 </a>
               </li>
               <li>
-                <a href="#cab-fleet" className="hover:text-[#9EF2EB] transition">
-                  Jamnagar &amp; Rajkot Airport Transfers
+                <a href="#cab-fleet" className="hover:text-[#9EF2EB] transition flex items-center justify-between group">
+                  <span className="group-hover:translate-x-1 transition-transform flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#9EF2EB]" />
+                    <span>{lang === 'gu' ? 'ટેમ્પો ટ્રાવેલર / અર્બાનિયા' : 'Tempo Traveller / Urbania'}</span>
+                  </span>
+                  <span className="text-[10px] text-gray-400 group-hover:text-[#9EF2EB]">17-20 Seater</span>
+                </a>
+              </li>
+              <li>
+                <a href="#cab-fleet" className="hover:text-[#9EF2EB] transition flex items-center justify-between group">
+                  <span className="group-hover:translate-x-1 transition-transform flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#9EF2EB]" />
+                    <span>{lang === 'gu' ? 'જામનગર/રાજકોટ એરપોર્ટ કેબ' : 'Jamnagar &amp; Rajkot Transfers'}</span>
+                  </span>
+                  <span className="text-[10px] text-gray-400 group-hover:text-[#9EF2EB]">24/7 Pickup</span>
                 </a>
               </li>
             </ul>
@@ -131,15 +219,9 @@ export default function Footer({ onOpenMobileApp, lang }) {
           {/* Column 4: Native Dwarka Office & Contacts */}
           <div className="space-y-3">
             <h4 className="text-sm font-extrabold uppercase tracking-wider text-[#9EF2EB]">
-              Dwarka Head Office
+              {lang === 'gu' ? 'દ્વારકા હેડ ઓફિસ' : 'Dwarka Head Office'}
             </h4>
             <div className="space-y-2.5 text-xs text-gray-300">
-              <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-[#9EF2EB] flex-shrink-0 mt-0.5" />
-                <span>
-                  Near Bhadkeshwar Mandir Road, Teen Batti Chowk, Dwarka, Gujarat 361335
-                </span>
-              </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#9EF2EB] flex-shrink-0" />
                 <a href="tel:+918320570717" className="hover:text-white transition">
@@ -194,10 +276,10 @@ export default function Footer({ onOpenMobileApp, lang }) {
           href="https://wa.me/918320570717?text=Jay%20Dwarkadhish!%20I%20want%20to%20inquire%20about%20Dwarka%20tours%20and%20cabs."
           target="_blank"
           rel="noreferrer"
-          className="w-12 h-12 rounded-full bg-[#10B981] text-white flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition"
+          className="w-12 h-12 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition"
           title="Chat on WhatsApp"
         >
-          <MessageCircle className="w-6 h-6" />
+          <img src='/social/whatsapp.png' alt="WhatsApp" className="w-12 h-12" />
         </a>
       </div>
     </footer >

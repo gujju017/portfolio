@@ -161,59 +161,65 @@ export const TOUR_PACKAGES = [
     gujaratiTitle: "દ્વારકા ૧-દિવસ દિવ્ય દર્શન",
     duration: "1 Day / 10 Hours",
     price: 3499,
-    originalPrice: 3999,
-    discount: "-25%",
+    originalPrice: 4499,
+    discount: "22% OFF",
     vehicle: "AC Sedan / SUV with Chilled AC",
     badge: "Most Popular",
+    rating: 4.9,
+    reviews: 420,
     inclusions: [
       "Nageshwar Mahadev",
       "Gopi Talav",
       "Bet Dwarka",
       "Shivrajpur Beach",
-      "Bhadkeshwar"
+      "Bhadkeshwar Mahadev"
     ],
     pickup: "Dwarka Railway Station / Hotel Pickup & Drop"
   },
   {
     id: "dwarka-bet-dwarka-2day",
-    title: "Dwarka Outside",
-    gujaratiTitle: "દ્વારકા - બેટ દ્વારકા ૨-દિવસ સંપૂર્ણ યાત્રા",
+    title: "Outside Dwarka Circuit",
+    gujaratiTitle: "બહાર દ્વારકા",
     duration: "1/2 Days",
     price: 5999,
-    originalPrice: 7000,
-    discount: "-22%",
-    vehicle: "SUV",
+    originalPrice: 7499,
+    discount: "20% OFF",
+    vehicle: "Comfort AC SUV",
     badge: "Bestseller",
+    rating: 4.8,
+    reviews: 290,
     inclusions: [
-      "Madhavpur beach",
-      "Somnath",
+      "Dwarka & Bet Dwarka Complete Circuit",
+      "Madhavpur Beach Coastal Drive",
+      "Somnath Mahadev Jyotirlinga Darshan",
+      "Dedicated Chauffeur & All Tolls Included"
     ],
     pickup: "Any Dwarka Hotel or Railway Station"
   },
-  // KM based SUV 16/RS
-  // SUV Sedan KM based available for N number of days and all types
-  // {
-  //   id: "shivrajpur-scuba-coastal",
-  //   title: "( BAKI CHE)",
-  //   gujaratiTitle: "શિવરાજપુર બ્લુ ફ્લેગ બીચ અને સ્કૂબા સફારી",
-  //   duration: "Full Day / 8 Hours",
-  //   price: 2799,
-  //   originalPrice: 3500,
-  //   discount: "-20%",
-  //   vehicle: "Private Tourist Cab",
-  //   rating: 4.9,
-  //   reviews: 480,
-  //   badge: "Adventure & Leisure",
-  //   inclusions: [
-  //     "PADI Certified Scuba Diving with underwater video/photos",
-  //     "Arabian Sea Dolphin Spotting Speedboat Safari",
-  //     "Shivrajpur Blue Flag private lounger & beach umbrella",
-  //     "Jet Ski & Banana water sport access",
-  //     "Fresh coconut water & authentic coastal snacks",
-  //     "Doorstep pick-up & drop from Dwarka hotel"
-  //   ],
-  //   pickup: "Dwarka City Hotels / Resorts"
-  // },
+  {
+    id: "km-based-suv",
+    title: "KM-Based SUV Rental (16 Rs/KM)",
+    gujaratiTitle: "કિ.મી. મુજબ SUV પ્રવાસ (૧૬ રૂ./કિ.મી.)",
+    duration: "Flexible / Any Number of Days",
+    price: 16,
+    originalPrice: 19,
+    priceUnit: "/ KM",
+    isKmBased: true,
+    discount: "16% OFF",
+    vehicle: "Comfort AC SUV",
+    badge: "High Flexibility",
+    rating: 4.9,
+    reviews: 350,
+    inclusions: [
+      "Flat ₹16 per KM transparent billing",
+      "Available for N number of days & all Gujarat routes",
+      "Covers Dwarka, Somnath, Gir National Park, Madhavpur & Diu",
+      "Sanitized AC SUV with experienced local Gujarati chauffeur",
+      "Doorstep pickup & drop at your hotel / railway station",
+      "Zero hidden driver allowance — genuine odometer based payment"
+    ],
+    pickup: "Dwarka, Jamnagar, Rajkot, Ahmedabad or any city"
+  }
 ];
 
 export const CAB_FLEET = [
@@ -268,85 +274,19 @@ export const CAB_FLEET = [
 ];
 
 // Interactive Waypoints for the Image 1-style Route Map Explorer
+// Ordered strictly in sacred sequence: Nageshwar -> Sudarshan Setu -> Bet Dwarka -> Shivrajpur -> Bhadkeshwar Mahadev
 export const DWARKA_WAYPOINTS = [
   {
-    id: "point-2",
-    name: "Gomti Ghat & Sudama Setu",
-    distanceKm: "0.8 km",
-    driveTime: "4 mins",
-    badge: "Sacred Bath",
-    category: "ghat",
-    coordX: 25,
-    coordY: 66,
-    shortNote: "Gomti river meets the Arabian sea. Sacred bath and camel rides.",
-    hotelsNearby: [
-      { name: "Hotel VITS Devbhumi", rating: "4.7", price: "₹2,200", image: "/images/temple_hero.jpg" }
-    ],
-    restaurantsNearby: [
-      { name: "Gomti Tea & Fafda Stalls", specialty: "Hot Fafda Jalebi & Kadak Masala Chai", rating: "4.8" }
-    ]
-  },
-  {
-    id: "point-3",
-    name: "Bhadkeshwar Mahadev & Lighthouse",
-    distanceKm: "2.5 km",
-    driveTime: "8 mins",
-    badge: "Sunset Point",
-    category: "heritage",
-    coordX: 32,
-    coordY: 54,
-    shortNote: "Ocean rock temple submerged in high tide. Pristine coastal sunset.",
-    hotelsNearby: [
-      { name: "Toran Tourist Bungalow TCGL", rating: "4.6", price: "₹1,800", image: "/images/shivrajpur_beach.jpg" }
-    ],
-    restaurantsNearby: [
-      { name: "Coastal Chaat & Coconut Grove", specialty: "Fresh Green Coconut & Kulfi", rating: "4.7" }
-    ]
-  },
-  {
-    id: "point-4",
-    name: "Rukmini Devi Temple",
-    distanceKm: "4.8 km",
-    driveTime: "12 mins",
-    badge: "12th Century Architecture",
-    category: "temple",
-    coordX: 42,
-    coordY: 48,
-    shortNote: "Dedicated to Queen Rukmini. Intricately carved stone sanctum.",
-    hotelsNearby: [
-      { name: "Hawthorn Suites by Wyndham", rating: "4.9", price: "₹4,400", image: "/images/temple_hero.jpg" }
-    ],
-    restaurantsNearby: [
-      { name: "Rukmini Vihar Dining", specialty: "Jain & Gujarati Bhojnalaya", rating: "4.8" }
-    ]
-  },
-  {
-    id: "point-5",
-    name: "Shivrajpur Blue Flag Beach",
-    distanceKm: "12.4 km",
-    driveTime: "18 mins",
-    badge: "Blue Flag Beach",
-    category: "beach",
-    coordX: 58,
-    coordY: 38,
-    shortNote: "Cleanest beach in Western India. Scuba diving, speedboats & dolphins.",
-    hotelsNearby: [
-      { name: "Shivrajpur Beach Resort & Tents", rating: "4.9", price: "₹3,200", image: "/images/shivrajpur_beach.jpg" }
-    ],
-    restaurantsNearby: [
-      { name: "Blue Flag Coastal Shack", specialty: "Gujarati Snacks, Fresh Juices & Sandwiches", rating: "4.8" }
-    ]
-  },
-  {
-    id: "point-6",
+    id: "wp-nageshwar",
     name: "Nageshwar Jyotirlinga",
+    gujaratiName: "શ્રી નાગેશ્વર જ્યોતિર્લિંગ",
     distanceKm: "17.2 km",
-    driveTime: "25 mins",
+    driveTime: "24 mins",
     badge: "1st Jyotirlinga",
     category: "temple",
-    coordX: 68,
-    coordY: 30,
-    shortNote: "Giant 85-ft Shiva statue & divine Jyotirlinga sanctum.",
+    coordX: 25,
+    coordY: 76,
+    shortNote: "Colossal 85-foot Shiva statue & 1st sacred Jyotirlinga for holy abhishek and darshan.",
     hotelsNearby: [
       { name: "Nageshwar Mahadev Yatri Nivas", rating: "4.6", price: "₹850", image: "/images/temple_hero.jpg" }
     ],
@@ -355,15 +295,16 @@ export const DWARKA_WAYPOINTS = [
     ]
   },
   {
-    id: "point-7",
-    name: "Sudarshan Setu & Okha Port",
+    id: "wp-sudarshan-setu",
+    name: "Sudarshan Setu (Okha Sea Bridge)",
+    gujaratiName: "સુદર્શન સેતુ (ઓખા બ્રિજ)",
     distanceKm: "32.0 km",
-    driveTime: "40 mins",
+    driveTime: "38 mins",
     badge: "Cable Sea Bridge",
     category: "bridge",
-    coordX: 82,
-    coordY: 20,
-    shortNote: "2.32 km cable-stayed suspension wonder across the Arabian Sea.",
+    coordX: 52,
+    coordY: 44,
+    shortNote: "India's longest 2.32 km cable-stayed suspension bridge across the Arabian Sea to Bet Dwarka.",
     hotelsNearby: [
       { name: "Okha Port Coastal Inn", rating: "4.5", price: "₹1,400", image: "/images/sudarshan_setu.jpg" }
     ],
@@ -372,23 +313,93 @@ export const DWARKA_WAYPOINTS = [
     ]
   },
   {
-    id: "point-8",
+    id: "wp-bet-dwarka",
     name: "Bet Dwarka (Lord Krishna Palace)",
+    gujaratiName: "બેટ દ્વારકા અને શ્રી કૃષ્ણ નિવાસ",
     distanceKm: "35.0 km",
-    driveTime: "50 mins",
+    driveTime: "48 mins",
     badge: "Sacred Island",
     category: "island",
-    coordX: 92,
-    coordY: 12,
-    shortNote: "Lord Krishna's island realm, dolphin waters & holy conch beaches.",
+    coordX: 82,
+    coordY: 18,
+    shortNote: "Lord Krishna's historical kingdom realm with dolphin bay, Sudama poha offering & holy conch shores.",
     hotelsNearby: [
       { name: "Beyt Island Heritage Retreat", rating: "4.8", price: "₹2,100", image: "/images/scuba_dolphin.jpg" }
     ],
     restaurantsNearby: [
       { name: "Keshavraoji Mahaprasad Hall", specialty: "Sudama Poha Prasad & Sweet Lapsi", rating: "5.0" }
     ]
+  },
+  {
+    id: "wp-shivrajpur",
+    name: "Shivrajpur Blue Flag Beach",
+    gujaratiName: "શિવરાજપુર બ્લુ ફ્લેગ બીચ",
+    distanceKm: "12.4 km",
+    driveTime: "18 mins",
+    badge: "Blue Flag Beach",
+    category: "beach",
+    coordX: 58,
+    coordY: 72,
+    shortNote: "Western India's premier international Blue Flag white sand beach with scuba diving and dolphin safaris.",
+    hotelsNearby: [
+      { name: "Shivrajpur Beach Resort & Tents", rating: "4.9", price: "₹3,200", image: "/images/shivrajpur_beach.jpg" }
+    ],
+    restaurantsNearby: [
+      { name: "Blue Flag Coastal Shack", specialty: "Gujarati Snacks, Fresh Juices & Sandwiches", rating: "4.8" }
+    ]
+  },
+  {
+    id: "wp-bhadkeshwar",
+    name: "Bhadkeshwar Mahadev & Sunset",
+    gujaratiName: "ભડકેશ્વર મહાદેવ અને સનસેટ",
+    distanceKm: "2.5 km",
+    driveTime: "8 mins",
+    badge: "Sunset Rock Temple",
+    category: "heritage",
+    coordX: 18,
+    coordY: 42,
+    shortNote: "Ocean rock temple naturally bathed by high-tide waves with the most magical Arabian Sea sunset.",
+    hotelsNearby: [
+      { name: "Toran Tourist Bungalow TCGL", rating: "4.6", price: "₹1,800", image: "/images/shivrajpur_beach.jpg" }
+    ],
+    restaurantsNearby: [
+      { name: "Coastal Chaat & Coconut Grove", specialty: "Fresh Green Coconut & Kulfi", rating: "4.7" }
+    ]
   }
 ];
+
+// Official Shree Dwarkadhish Mandir Darshan and Aarti Schedule
+export const DWARKA_DARSHAN_SCHEDULE = {
+  morning: [
+    { id: "m1", time: "06:30 AM", activityGu: "મંગળા આરતી", activityEn: "Mangala Aarti", status: "open", isAarti: true, startMin: 390, endMin: 400 },
+    { id: "m2", time: "06:30 AM – 08:00 AM", activityGu: "મંગળા દર્શન", activityEn: "Mangala Darshan", status: "open", isAarti: false, startMin: 390, endMin: 480 },
+    { id: "m3", time: "08:00 AM – 09:00 AM", activityGu: "અભિષેક પૂજા", activityEn: "Abhishek Puja (Darshan Closed)", status: "closed", isAarti: false, startMin: 480, endMin: 540 },
+    { id: "m4", time: "09:00 AM – 09:30 AM", activityGu: "શૃંગાર દર્શન", activityEn: "Shringar Darshan", status: "open", isAarti: false, startMin: 540, endMin: 570 },
+    { id: "m5", time: "09:30 AM – 09:45 AM", activityGu: "સ્નાન ભોગ", activityEn: "Snan Bhog (Darshan Closed)", status: "closed", isAarti: false, startMin: 570, endMin: 585 },
+    { id: "m6", time: "09:45 AM – 10:15 AM", activityGu: "શૃંગાર દર્શન", activityEn: "Shringar Darshan", status: "open", isAarti: false, startMin: 585, endMin: 615 },
+    { id: "m7", time: "10:15 AM – 10:30 AM", activityGu: "શૃંગાર ભોગ", activityEn: "Shringar Bhog (Darshan Closed)", status: "closed", isAarti: false, startMin: 615, endMin: 630 },
+    { id: "m8", time: "10:30 AM – 10:45 AM", activityGu: "શૃંગાર આરતી", activityEn: "Shringar Aarti", status: "open", isAarti: true, startMin: 630, endMin: 645 },
+    { id: "m9", time: "11:05 AM – 11:20 AM", activityGu: "ગ્વાલ ભોગ", activityEn: "Gwal Bhog (Darshan Closed)", status: "closed", isAarti: false, startMin: 665, endMin: 680 },
+    { id: "m10", time: "11:20 AM – 12:00 PM", activityGu: "દર્શન ચાલુ", activityEn: "Darshan Open", status: "open", isAarti: false, startMin: 680, endMin: 720 },
+    { id: "m11", time: "12:00 PM – 12:20 PM", activityGu: "રાજભોગ", activityEn: "Rajbhog (Darshan Closed)", status: "closed", isAarti: false, startMin: 720, endMin: 740 },
+    { id: "m12", time: "12:20 PM – 01:00 PM", activityGu: "દર્શન ચાલુ", activityEn: "Darshan Open", status: "open", isAarti: false, startMin: 740, endMin: 780 },
+    { id: "m13", time: "01:00 PM", activityGu: "અનોષર", activityEn: "Anosar (Darshan Closed until 05:00 PM)", status: "closed", isAarti: false, startMin: 780, endMin: 1020 }
+  ],
+  evening: [
+    { id: "e1", time: "05:00 PM", activityGu: "દર્શન ચાલુ", activityEn: "Darshan Open", status: "open", isAarti: false, startMin: 1020, endMin: 1050 },
+    { id: "e2", time: "05:30 PM – 05:45 PM", activityGu: "ઉત્થાપન ભોગ", activityEn: "Uthapan Bhog (Darshan Closed)", status: "closed", isAarti: false, startMin: 1050, endMin: 1065 },
+    { id: "e3", time: "05:45 PM – 07:15 PM", activityGu: "દર્શન ચાલુ", activityEn: "Darshan Open", status: "open", isAarti: false, startMin: 1065, endMin: 1155 },
+    { id: "e4", time: "07:15 PM – 07:30 PM", activityGu: "સંધ્યા ભોગ", activityEn: "Sandhya Bhog (Darshan Closed)", status: "closed", isAarti: false, startMin: 1155, endMin: 1170 },
+    { id: "e5", time: "07:30 PM – 07:45 PM", activityGu: "સંધ્યા આરતી", activityEn: "Sandhya Aarti", status: "open", isAarti: true, startMin: 1170, endMin: 1185 },
+    { id: "e6", time: "08:00 PM – 08:10 PM", activityGu: "શયન ભોગ", activityEn: "Shayan Bhog (Darshan Closed)", status: "closed", isAarti: false, startMin: 1200, endMin: 1210 },
+    { id: "e7", time: "08:10 PM – 08:30 PM", activityGu: "દર્શન ચાલુ", activityEn: "Darshan Open", status: "open", isAarti: false, startMin: 1210, endMin: 1230 },
+    { id: "e8", time: "08:30 PM – 08:35 PM", activityGu: "શયન આરતી", activityEn: "Shayan Aarti", status: "open", isAarti: true, startMin: 1230, endMin: 1235 },
+    { id: "e9", time: "08:35 PM – 09:00 PM", activityGu: "દર્શન ચાલુ", activityEn: "Darshan Open", status: "open", isAarti: false, startMin: 1235, endMin: 1260 },
+    { id: "e10", time: "09:00 PM – 09:20 PM", activityGu: "શયન", activityEn: "Shayan (Darshan Closed)", status: "closed", isAarti: false, startMin: 1260, endMin: 1280 },
+    { id: "e11", time: "09:20 PM – 09:30 PM", activityGu: "દર્શન ચાલુ", activityEn: "Darshan Open", status: "open", isAarti: false, startMin: 1280, endMin: 1290 },
+    { id: "e12", time: "09:30 PM", activityGu: "દર્શન બંધ", activityEn: "Darshan Closed (Night Rest until 06:30 AM)", status: "closed", isAarti: false, startMin: 1290, endMin: 1830 }
+  ]
+};
 
 export const DWARKA_LOCAL_GUIDE = {
   dhwajarohanSchedule: [

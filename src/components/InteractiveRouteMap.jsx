@@ -12,10 +12,10 @@ import { useState } from 'react';
 import { DWARKA_WAYPOINTS } from '../data/dwarkaData';
 
 export default function InteractiveRouteMap({ onOpenBooking, lang }) {
-  const [activePointIndex, setActivePointIndex] = useState(4); // Default to Shivrajpur Beach
+  const [activePointIndex, setActivePointIndex] = useState(0); // Sequence starts at 1. Nageshwar Jyotirlinga
   const [activeTab, setActiveTab] = useState('hotels'); // 'hotels' | 'restaurants'
 
-  const currentPoint = DWARKA_WAYPOINTS[activePointIndex];
+  const currentPoint = DWARKA_WAYPOINTS[activePointIndex] || DWARKA_WAYPOINTS[0];
 
   return (
     <section id="route-map" className="py-20 bg-gradient-to-b from-[#F6FAF9] to-[#EBF4F5] relative overflow-hidden">
@@ -25,17 +25,17 @@ export default function InteractiveRouteMap({ onOpenBooking, lang }) {
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2B8F9E]/10 border border-[#2B8F9E]/30 text-[#2B8F9E] text-xs font-bold uppercase tracking-wider mb-3">
             <Compass className="w-3.5 h-3.5 text-[#2B8F9E]" />
-            <span>{lang === 'gu' ? 'ઇન્ટરેક્ટિવ રૂટ નેવિગેટર' : 'Interactive Coastal Route & Waypoint Explorer'}</span>
+            <span>{lang === 'gu' ? 'ક્રમબદ્ધ ઇન્ટરેક્ટિવ રૂટ નેવિગેટર' : 'Sequential Coastal Route & Waypoint Explorer'}</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1F2E35] tracking-tight">
             {lang === 'gu'
-              ? 'દ્વારકાથી બેટ દ્વારકા: ૩૫ કિ.મી. દરિયાઈ યાત્રા'
-              : 'Explore the Sacred 35 km Dwarka Coastal Circuit'}
+              ? 'દ્વારકા પવિત્ર દર્શન ક્રમ: નાગેશ્વર થી ભડકેશ્વર'
+              : 'Explore the Sacred Dwarka Coastal Circuit in Sequence'}
           </h2>
           <p className="mt-3 text-sm sm:text-base text-[#566E7A] leading-relaxed">
             {lang === 'gu'
-              ? 'મુખ્ય જગત મંદિરથી શરૂ કરીને ગોમતી ઘાટ, ભડકેશ્વર, શિવરાજપુર બીચ, નાગેશ્વર જ્યોતિર્લિંગ અને સુદર્શન સેતુ સુધીના દરેક સ્ટોપ પર ક્લિક કરો.'
-              : 'Directly trace your trip from Dwarkadhish Mandir through coastal cliffs, the Blue Flag beach, ancient Jyotirlinga, and the new Sudarshan Setu sea bridge.'}
+              ? '૧. નાગેશ્વર જ્યોતિર્લિંગ ➔ ૨. સુદર્શન સેતુ ➔ ૩. બેટ દ્વારકા ➔ ૪. શિવરાજપુર બીચ ➔ ૫. ભડકેશ્વર મહાદેવ ના ક્રમમાં દરેક સ્થળની માહિતી જુઓ.'
+              : 'Follow the curated pilgrim sequence: 1. Nageshwar Jyotirlinga ➔ 2. Sudarshan Setu ➔ 3. Bet Dwarka ➔ 4. Shivrajpur Beach ➔ 5. Bhadkeshwar Mahadev.'}
           </p>
         </div>
 
@@ -95,24 +95,28 @@ export default function InteractiveRouteMap({ onOpenBooking, lang }) {
                     onClick={() => setActivePointIndex(idx)}
                     style={{ left: `${wp.coordX}%`, top: `${wp.coordY}%` }}
                     className={`absolute -translate-x-1/2 -translate-y-1/2 z-20 group transition-all duration-300 focus:outline-none`}
-                    title={wp.name}
+                    title={`${idx + 1}. ${wp.name}`}
                   >
                     {/* Active Ring Marker (Image 1 style) */}
                     {isActive ? (
                       <div className="relative flex items-center justify-center">
                         <span className="w-10 h-10 rounded-full bg-[#E94057]/30 animate-ping absolute"></span>
-                        <div className="w-7 h-7 rounded-full bg-[#E94057] p-1 shadow-lg border-2 border-white flex items-center justify-center">
-                          <div className="w-2.5 h-2.5 rounded-full bg-white"></div>
+                        <div className="w-7 h-7 rounded-full bg-[#E94057] shadow-lg border-2 border-white flex items-center justify-center">
+                          <span className="text-[10px] font-extrabold text-white">{idx + 1}</span>
                         </div>
 
                         {/* Floating Tooltip Label connected with pin */}
-                        <div className="absolute bottom-9 left-1/2 -translate-x-1/2 whitespace-nowrap bg-white/90 backdrop-blur-md text-[#1F2E35] text-[11px] font-extrabold px-3 py-1 rounded-xl shadow-xl border border-white flex items-center gap-1.5 animate-bounce">
-                          <span>{wp.name}</span>
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#E94057]"></span>
+                        <div className="absolute bottom-9 left-1/2 -translate-x-1/2 whitespace-nowrap bg-white/95 backdrop-blur-md text-[#1F2E35] text-[11px] font-extrabold px-3 py-1 rounded-xl shadow-xl border border-white flex items-center gap-1.5 animate-bounce">
+                          <span className="w-4 h-4 rounded-full bg-[#E94057] text-white flex items-center justify-center text-[9px] font-bold">
+                            {idx + 1}
+                          </span>
+                          <span>{lang === 'gu' ? wp.gujaratiName || wp.name : wp.name}</span>
                         </div>
                       </div>
                     ) : (
-                      <div className="w-4 h-4 rounded-full bg-white/80 group-hover:bg-[#9EF2EB] group-hover:scale-125 transition-all shadow-md border-2 border-[#1F2E35]"></div>
+                      <div className="w-6 h-6 rounded-full bg-white/90 text-[#1F2E35] text-[10px] font-bold flex items-center justify-center group-hover:bg-[#9EF2EB] group-hover:scale-125 transition-all shadow-md border-2 border-[#1F2E35]">
+                        {idx + 1}
+                      </div>
                     )}
                   </button>
                 );
@@ -167,18 +171,25 @@ export default function InteractiveRouteMap({ onOpenBooking, lang }) {
 
             {/* Waypoint Selector Thumbnails Bar */}
             <div className="mt-4 pt-3 flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
-              {DWARKA_WAYPOINTS.map((wp, idx) => (
-                <button
-                  key={wp.id}
-                  onClick={() => setActivePointIndex(idx)}
-                  className={`px-3 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition flex items-center gap-1.5 ${idx === activePointIndex
-                      ? 'bg-[#E94057] text-white font-bold shadow-md'
-                      : 'bg-white/10 hover:bg-white/20 text-gray-300'
-                    }`}
-                >
-                  <span>{idx + 1}. {wp.name.split(' ')[0]}</span>
-                </button>
-              ))}
+              {DWARKA_WAYPOINTS.map((wp, idx) => {
+                const isActive = idx === activePointIndex;
+                const shortLabel = idx === 0 ? 'Nageshwar' : idx === 1 ? 'Sudarshan Setu' : idx === 2 ? 'Bet Dwarka' : idx === 3 ? 'Shivrajpur' : 'Bhadkeshwar';
+                return (
+                  <button
+                    key={wp.id}
+                    onClick={() => setActivePointIndex(idx)}
+                    className={`px-3 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all duration-200 flex items-center gap-1.5 active:scale-95 ${isActive
+                        ? 'bg-[#E94057] text-white font-bold shadow-lg shadow-[#E94057]/30 scale-105'
+                        : 'bg-white/10 hover:bg-white/20 text-gray-300'
+                      }`}
+                  >
+                    <span className="w-4 h-4 rounded-full bg-black/20 flex items-center justify-center text-[10px]">
+                      {idx + 1}
+                    </span>
+                    <span>{lang === 'gu' ? wp.gujaratiName || shortLabel : shortLabel}</span>
+                  </button>
+                );
+              })}
             </div>
           </div>
 
@@ -190,10 +201,10 @@ export default function InteractiveRouteMap({ onOpenBooking, lang }) {
                 <div>
                   <div className="flex items-center gap-2 text-xs font-bold text-[#2B8F9E] uppercase tracking-wider">
                     <MapPin className="w-3.5 h-3.5" />
-                    <span>Stop #{activePointIndex + 1} of 8</span>
+                    <span>Stop #{activePointIndex + 1} of {DWARKA_WAYPOINTS.length}</span>
                   </div>
                   <h3 className="text-2xl font-extrabold text-[#1F2E35] mt-1">
-                    {currentPoint.name}
+                    {lang === 'gu' ? currentPoint.gujaratiName || currentPoint.name : currentPoint.name}
                   </h3>
                 </div>
                 <span className="px-3 py-1 rounded-full text-xs font-bold bg-[#9EF2EB]/40 text-[#1F2E35]">

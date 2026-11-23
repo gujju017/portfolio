@@ -23,11 +23,7 @@ export default function Navbar({
           <div className="flex items-center gap-2">
             <span className="inline-block w-2 h-2 rounded-full bg-[#10B981] animate-ping"></span>
             <span className="font-medium text-[#9EF2EB]">
-              {lang === 'gu' ? 'જય દ્વારકાધીશ! દ્વારકામાં સ્વાગત છે' : 'Jay Dwarkadhish!'}
-            </span>
-            <span className="hidden md:inline text-gray-300">|</span>
-            <span className="hidden md:inline text-gray-300">
-              {lang === 'gu' ? 'સ્થાનિક દ્રારકા આધારિત અધિકૃત કેબ અને પ્રવાસ સેવાઓ' : 'Official Native Dwarka Travel & AC Cab Partner'}
+              {lang === 'gu' ? 'જય દ્વારકાધીશ !' : 'Jay Dwarkadhish !'}
             </span>
           </div>
 
@@ -49,18 +45,20 @@ export default function Navbar({
               href="https://wa.me/918320570717?text=Hello%20Gujju%20Tour%20and%20Travels,%20I%20want%20to%20plan%20a%20trip%20to%20Dwarka."
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-1 text-[#10B981] font-semibold hover:underline"
+              className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#25D366]/15 hover:bg-[#25D366]/25 text-[#25D366] hover:text-[#2ee873] border border-[#25D366]/30 font-bold transition-all duration-200 hover:scale-105 shadow-sm"
+              title="Chat with us on WhatsApp"
             >
-              <img src='/social/whatsapp.png' className="w-3.5 h-3.5" />
+              <img src='/social/whatsapp.png' alt="WhatsApp" className="w-3.5 h-3.5 object-contain" />
               <span>WhatsApp</span>
             </a>
             <a
               href="https://www.instagram.com/gujju_tour_and_travels17"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-1 text-red-300 font-semibold hover:underline"
+              className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-gradient-to-r from-[#F58529]/15 via-[#DD2A7B]/15 to-[#8134AF]/15 hover:from-[#F58529]/25 hover:via-[#DD2A7B]/25 hover:to-[#8134AF]/25 text-[#FF5B84] hover:text-[#ff749a] border border-[#DD2A7B]/30 font-bold transition-all duration-200 hover:scale-105 shadow-sm"
+              title="Follow us on Instagram"
             >
-              <img src='/social/instagram.png' className="w-3.5 h-3.5" />
+              <img src='/social/instagram.png' alt="Instagram" className="w-3.5 h-3.5 object-contain" />
               <span>Instagram</span>
             </a>
           </div>
@@ -182,10 +180,32 @@ export default function Navbar({
                   setMobileMenuOpen(false);
                   onOpenBooking();
                 }}
-                className="w-full py-2.5 rounded-xl bg-[#2B8F9E] text-white text-sm font-bold shadow"
+                className="w-full py-2.5 rounded-xl bg-[#2B8F9E] text-white text-sm font-bold shadow hover:bg-[#1F2E35] transition"
               >
                 Book Your Yatra Now
               </button>
+
+              {/* Mobile Social Links */}
+              <div className="flex items-center gap-2 pt-2 border-t border-gray-100">
+                <a
+                  href="https://wa.me/918320570717?text=Hello%20Gujju%20Tour%20and%20Travels,%20I%20want%20to%20plan%20a%20trip%20to%20Dwarka."
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex-1 flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-[#25D366]/15 text-[#25D366] border border-[#25D366]/30 text-xs font-bold hover:bg-[#25D366]/25 transition active:scale-95"
+                >
+                  <img src='/social/whatsapp.png' alt="WhatsApp" className="w-4 h-4 object-contain" />
+                  <span>WhatsApp</span>
+                </a>
+                <a
+                  href="https://www.instagram.com/gujju_tour_and_travels17"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex-1 flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-gradient-to-r from-[#F58529]/15 via-[#DD2A7B]/15 to-[#8134AF]/15 text-[#FF5B84] border border-[#DD2A7B]/30 text-xs font-bold hover:brightness-110 transition active:scale-95"
+                >
+                  <img src='/social/instagram.png' alt="Instagram" className="w-4 h-4 object-contain" />
+                  <span>Instagram</span>
+                </a>
+              </div>
             </div>
           </div>
         )}
